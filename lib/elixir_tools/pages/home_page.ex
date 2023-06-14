@@ -22,7 +22,7 @@ defmodule ElixirTools.HomePage do
       hr class: "mb-8"
 
       p do
-        "elixir-tools is a suite of developor tooling and packages for Elixir developers."
+        "elixir-tools is a suite of developer tooling and packages for Elixir developers."
       end
 
       p class: "mt-8" do
