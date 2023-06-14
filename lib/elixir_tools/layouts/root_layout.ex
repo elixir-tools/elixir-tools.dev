@@ -2,6 +2,8 @@ defmodule ElixirTools.RootLayout do
   use ElixirTools.Component
   use Tableau.Layout
 
+  @env Mix.env()
+
   def template(assigns) do
     temple do
       "<!DOCTYPE html>"
@@ -11,6 +13,10 @@ defmodule ElixirTools.RootLayout do
           meta charset: "utf-8"
           meta http_equiv: "X-UA-Compatible", content: "IE=edge"
           meta name: "viewport", content: "width=device-width, initial-scale=1.0"
+
+          if Mix.env() == :prod do
+            script defer: true, data_domain: "elixir-tools.dev", src: "/js/foo.js"
+          end
 
           link rel: "stylesheet", href: "/css/site.css"
         end
