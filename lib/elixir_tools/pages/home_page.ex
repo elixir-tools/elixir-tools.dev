@@ -43,49 +43,27 @@ defmodule ElixirTools.HomePage do
 
       p do
         ul class: "list-disc ml-4" do
-          li do
-            a href: "https://github.com/elixir-tools/next-ls",
-              class: "text-blue-500 hover:underline" do
-              "next-ls"
-            end
-          end
-
-          li do
-            a href: "https://github.com/elixir-tools/credo-language-server",
-              class: "text-blue-500 hover:underline" do
-              "credo-language-server"
-            end
-          end
-
-          li do
-            a href: "https://github.com/elixir-tools/elixir-tools.nvim",
-              class: "text-blue-500 hover:underline" do
-              "elixir-tools.nvim"
-            end
-          end
-
-          li do
-            a href: "https://github.com/elixir-tools/elixir-tools.vscode",
-              class: "text-blue-500 hover:underline" do
-              "elixir-tools.vscode"
-            end
-          end
-
-          li do
-            a href: "https://github.com/elixir-tools/gen_lsp",
-              class: "text-blue-500 hover:underline" do
-              "gen_lsp"
-            end
-          end
-
-          li do
-            a href: "https://github.com/elixir-tools/tableau",
-              class: "text-blue-500 hover:underline" do
-              "tableau"
+          for tool <- tools() do
+            li do
+              a href: "https://github.com/elixir-tools/#{tool}",
+                class: "text-blue-500 hover:underline" do
+                tool
+              end
             end
           end
         end
       end
     end
+  end
+
+  defp tools() do
+    [
+      "next-ls",
+      "credo-language-server",
+      "elixir-tools.nvim",
+      "elixir-tools.vscode",
+      "gen_lsp",
+      "tableau"
+    ]
   end
 end
