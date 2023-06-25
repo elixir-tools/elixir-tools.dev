@@ -7,48 +7,35 @@ defmodule ElixirTools.HomePage do
 
   def template(_assigns) do
     temple do
-      h1 class: "font-medium text-2xl text-gray-800 py-2" do
-        div class: "flex items-center space-x-2" do
-          a href: "https://github.com/elixir-tools", class: "hover:underline" do
-            img src: "/elixir-tools-no-background.png", class: "h-8 w-8"
-          end
-
-          a href: "https://github.com/elixir-tools", class: "hover:underline" do
-            "elixir-tools"
-          end
-        end
-      end
-
-      hr class: "mb-8"
-
       p do
         "elixir-tools is a suite of developer tooling and packages for Elixir developers."
       end
 
-      p class: "mt-8" do
+      p do
         "The elixir-tools effort is lead by"
 
         a class: "text-blue-500 hover:underline",
           href: "https://github.com/mhanberg",
-          do: "Mitchell Hanberg"
+          do: "Mitchell Hanberg,"
 
-        ", please considering sponsoring his work through"
+        "please considering sponsoring his work through"
 
         a class: "text-blue-500 hover:underline",
           href: "https://github.com/sponsors/mhanberg",
           do: "GitHub Sponsors."
       end
 
-      h2 class: "text-xl font-medium mt-8 mb-2", do: "Tools"
+      h2 class: "text-xl font-medium mt-4 mb-2", do: "Tools"
 
       p do
         ul class: "list-disc ml-4" do
-          for tool <- tools() do
+          for {tool, href, description} <- tools() do
             li do
-              a href: "https://github.com/elixir-tools/#{tool}",
-                class: "text-blue-500 hover:underline" do
+              a href: href, class: "text-blue-500 hover:underline" do
                 tool
               end
+
+              span do: "- " <> description
             end
           end
         end
@@ -56,14 +43,14 @@ defmodule ElixirTools.HomePage do
     end
   end
 
-  defp tools() do
+  def tools() do
     [
-      "next-ls",
-      "credo-language-server",
-      "elixir-tools.nvim",
-      "elixir-tools.vscode",
-      "gen_lsp",
-      "tableau"
+      {"next-ls", "/next-ls", "Language Server Protocol implementation for Elixir"},
+      {"credo-language-server", "https://github.com/elixir-tools/credo-language-server", "Langauge Server Protocol implementation for Credo"},
+      {"elixir-tools.nvim", "https://github.com/elixir-tools/elixir-tools.nvim", "Elixir plugin for Neovim"},
+      {"elixir-tools.vscode", "https://github.com/elixir-tools/elixir-tools.vscode", "Elixir extension for Visual Studio Code"},
+      {"gen_lsp", "https://github.com/elixir-tools/gen_lsp", "GenLSP is an OTP behaviour for building langauge server protocol implementations"},
+      {"tableau", "https://github.com/elixir-tools/tableau", "Static site generator"}
     ]
   end
 end

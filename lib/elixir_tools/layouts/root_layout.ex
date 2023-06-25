@@ -2,8 +2,6 @@ defmodule ElixirTools.RootLayout do
   use ElixirTools.Component
   use Tableau.Layout
 
-  @env Mix.env()
-
   def template(assigns) do
     temple do
       "<!DOCTYPE html>"
@@ -18,17 +16,102 @@ defmodule ElixirTools.RootLayout do
             script defer: true, data_domain: "elixir-tools.dev", src: "/js/foo.js"
           end
 
+          title do: "elixir-tools"
+
           link rel: "stylesheet", href: "/css/site.css"
         end
 
         body class: "font-sans" do
-          main class: "container mx-auto px-2" do
-            render(@inner_content)
-          end
-        end
+          div id: "the-universe" do
+            header class: "container mx-auto px-2" do
+              section class: "py-2" do
+                div class: "flex items-center space-x-2" do
+                  a href: "/", class: "hover:underline" do
+                    img src: "/elixir-tools-no-background.png", class: "h-8 w-8"
+                  end
 
-        if Mix.env() == :dev do
-          c &Tableau.Components.live_reload/1
+                  h1 do
+                    a href: "/", class: "font-medium text-2xl text-gray-800 hover:underline" do
+                      "elixir-tools"
+                    end
+                  end
+                end
+              end
+
+              hr class: "mb-8"
+            end
+
+            main class: "container mx-auto px-2" do
+              render(@inner_content)
+            end
+
+            footer class: "bg-gray-900 text-white py-4 " do
+              div class:
+                    "container mx-auto px-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-16 gap-y-8" do
+                div do
+                  h4 class: "text-lg font-medium mb-2", do: "Tools"
+
+                  ul do
+                    for {tool, href, _} <- ElixirTools.HomePage.tools() do
+                      li do
+                        a href: href, class: "text-white hover:underline" do
+                          tool
+                        end
+                      end
+                    end
+                  end
+                end
+
+                div do
+                  h4 class: "text-lg font-medium mb-2", do: "Organization"
+
+                  ul do
+                    li do
+                      a href: "https://github.com/elixir-tools",
+                        class: "text-white hover:underline" do
+                        "elixir-tools"
+                      end
+                    end
+                  end
+                end
+
+                div do
+                  h4 class: "text-lg font-medium mb-2", do: "Team"
+
+                  ul do
+                    li do
+                      a href: "https://github.com/sponsors/mhanberg",
+                        class: "text-white hover:underline" do
+                        "Mitchell Hanberg"
+                      end
+                    end
+                  end
+                end
+
+                div do
+                  h4 class: "text-lg font-medium mb-2", do: "Site"
+
+                  div class: "italic text-sm" do
+                    span do: "Built with"
+
+                    a class: "underline",
+                      href: "https://github.com/elixir-tools/tableau",
+                      do: "Tableau,"
+
+                    a class: "underline",
+                      href: "https://tailwindcss.com",
+                      do: "TailwindCSS,"
+
+                    " and ♥"
+                  end
+                end
+              end
+            end
+          end
+
+          if Mix.env() == :dev do
+            c &Tableau.Components.live_reload/1
+          end
         end
       end
     end

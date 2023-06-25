@@ -2,3 +2,18 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+#the-universe {
+  @apply min-h-screen;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+p {
+  @apply pb-4;
+}
+
+a:not(data-css-override) {
+  @apply text-blue-500 hover:underline;
+}
