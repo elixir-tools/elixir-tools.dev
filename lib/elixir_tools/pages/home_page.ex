@@ -46,10 +46,14 @@ defmodule ElixirTools.HomePage do
   def tools() do
     [
       {"next-ls", "/next-ls", "Language Server Protocol implementation for Elixir"},
-      {"credo-language-server", "https://github.com/elixir-tools/credo-language-server", "Langauge Server Protocol implementation for Credo"},
-      {"elixir-tools.nvim", "https://github.com/elixir-tools/elixir-tools.nvim", "Elixir plugin for Neovim"},
-      {"elixir-tools.vscode", "https://github.com/elixir-tools/elixir-tools.vscode", "Elixir extension for Visual Studio Code"},
-      {"gen_lsp", "https://github.com/elixir-tools/gen_lsp", "GenLSP is an OTP behaviour for building langauge server protocol implementations"},
+      {"credo-language-server", "https://github.com/elixir-tools/credo-language-server",
+       "Langauge Server Protocol implementation for Credo"},
+      {"elixir-tools.nvim", "https://github.com/elixir-tools/elixir-tools.nvim",
+       "Elixir plugin for Neovim"},
+      {"elixir-tools.vscode", "https://github.com/elixir-tools/elixir-tools.vscode",
+       "Elixir extension for Visual Studio Code"},
+      {"gen_lsp", "https://github.com/elixir-tools/gen_lsp",
+       "GenLSP is an OTP behaviour for building langauge server protocol implementations"},
       {"tableau", "https://github.com/elixir-tools/tableau", "Static site generator"}
     ]
   end
