@@ -3,6 +3,7 @@ defmodule ElixirTools.PostExtension.Post do
     attrs
     |> Map.put(:body, body)
     |> Map.put(:file, filename)
+    |> Map.put(:date, DateTime.from_naive!(attrs.date, "America/Indiana/Indianapolis"))
     |> Map.put(
       :permalink,
       attrs.permalink
@@ -15,7 +16,7 @@ defmodule ElixirTools.PostExtension.Post do
 end
 
 defmodule ElixirTools.PostExtension do
-  use Tableau.Extension, type: :pre_build
+  use Tableau.Extension, type: :pre_build, priority: 100
 
   use NimblePublisher,
     build: __MODULE__.Post,

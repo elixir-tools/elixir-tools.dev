@@ -21,4 +21,6 @@ config :tailwind,
 
 config :tableau, :assets, tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
 
+config :elixir, :time_zone_database, Tz.TimeZoneDatabase
+
 import_config "#{Mix.env()}.exs"
