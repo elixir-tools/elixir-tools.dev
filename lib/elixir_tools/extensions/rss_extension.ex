@@ -19,7 +19,7 @@ defmodule ElixirTools.RssExtension do
     items =
       for post <-
             ElixirTools.PostExtension.posts()
-            |> Enum.sort_by(& &1.date, ({:desc, DateTime})),
+            |> Enum.sort_by(& &1.date, {:desc, DateTime}),
           into: "" do
         """
             <item>
@@ -38,6 +38,7 @@ defmodule ElixirTools.RssExtension do
       </rss>
       """
 
+    File.mkdir_p!("_site")
     File.write!("_site/feed.xml", prelude <> items <> postlude)
   end
 
