@@ -30,6 +30,7 @@ defmodule ElixirTools.MixProject do
   defp deps do
     [
       {:tableau, "~> 0.3"},
+      {:tz, "~> 0.26.2"},
       {:nimble_publisher, "~> 1.0"},
       {:makeup_elixir, ">= 0.0.0"},
       {:temple, "~> 0.12"},
