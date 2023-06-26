@@ -119,7 +119,7 @@ defmodule ElixirTools.NextLSPage do
       end
 
       p do
-        "NextLS can provide symbol loopup for your entire codebase."
+        "NextLS can provide symbol lookup for your entire codebase."
       end
 
       p do
