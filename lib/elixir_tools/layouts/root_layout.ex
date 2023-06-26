@@ -91,18 +91,26 @@ defmodule ElixirTools.RootLayout do
                 div do
                   h4 class: "text-lg font-medium mb-2", do: "Site"
 
-                  div class: "italic text-sm" do
-                    span do: "Built with"
+                  ul do
+                    li do
+                      a href: "/feed.xml", class: "text-white hover:underline" do
+                        "RSS"
+                      end
+                    end
 
-                    a class: "underline",
-                      href: "https://github.com/elixir-tools/tableau",
-                      do: "Tableau,"
+                    li class: "italic text-sm mt-2" do
+                      span do: "Built with"
 
-                    a class: "underline",
-                      href: "https://tailwindcss.com",
-                      do: "TailwindCSS,"
+                      a class: "underline",
+                        href: "https://github.com/elixir-tools/tableau",
+                        do: "Tableau,"
 
-                    " and ♥"
+                      a class: "underline",
+                        href: "https://tailwindcss.com",
+                        do: "TailwindCSS,"
+
+                      " and ♥"
+                    end
                   end
                 end
               end
