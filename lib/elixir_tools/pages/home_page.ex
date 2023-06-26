@@ -40,6 +40,12 @@ defmodule ElixirTools.HomePage do
           end
         end
       end
+
+      h2 class: "text-xl font-medium mt-4 mb-2", do: "News"
+
+      p do
+        span class: "italic", do: "Coming soon!"
+      end
     end
   end
 
