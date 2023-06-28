@@ -67,9 +67,23 @@ defmodule ElixirTools.RootLayout do
 
                   ul do
                     li do
+                      a href: "https://www.elixir-tools.dev",
+                        class: "text-white hover:underline" do
+                        "Website"
+                      end
+                    end
+
+                    li do
                       a href: "https://github.com/elixir-tools",
                         class: "text-white hover:underline" do
-                        "elixir-tools"
+                        "GitHub"
+                      end
+                    end
+
+                    li do
+                      a href: "https://twitter.com/elixir_tools",
+                        class: "text-white hover:underline" do
+                        "Twitter"
                       end
                     end
                   end
