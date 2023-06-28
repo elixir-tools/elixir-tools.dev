@@ -1,21 +1,7 @@
-# ElixirTools
+# elixir-tools.dev
 
-**TODO: Add description**
+The official website for [elixir-tools](https://www.elixir-tools.dev).
 
-## Installation
+Built with the [Tableau](https://github.com/elixir-tools/tableau) static site generator. 👨‍🔧
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elixir_tools` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:elixir_tools, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/elixir_tools>.
-
+<img width="1490" alt="image" src="https://github.com/elixir-tools/elixir-tools.dev/assets/5523984/cb081159-52dc-4f8a-90da-5c34c04da3d2">
