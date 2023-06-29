@@ -41,7 +41,7 @@ defmodule ElixirTools.NextLSPage do
 
         c &markdown/1,
           text: """
-          _The following screenshots and videos are suing [Neovim](https://neovim.io), the [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim) plugin, and the [Kanagawa (dragon)](https://github.com/rebelot/kanagawa.nvim) colorscheme._
+          _The following screenshots and videos are using [Neovim](https://neovim.io), the [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim) plugin, and the [Kanagawa (dragon)](https://github.com/rebelot/kanagawa.nvim) colorscheme._
           """
 
         h3 class: "font-medium text-xl text-gray-800 py-2" do
@@ -133,7 +133,7 @@ defmodule ElixirTools.NextLSPage do
           text: """
           Document Symbols are similar to Workspace Symbols, but provide the symbols _only_ for the currently open document.
 
-          They also have an intrinsic hierarchy that makes the useful for seeing the relationship between the documents modules, structs, and functions.
+          They also have an intrinsic hierarchy that makes them useful for seeing the relationship between the document's modules, structs, and functions.
           """
 
         h5 id: "document-symbols-breadcrumbs", class: "font-medium text-gray-800 py-2 mb-4" do
@@ -142,7 +142,7 @@ defmodule ElixirTools.NextLSPage do
 
         c &markdown/1,
           text: """
-          Breadcrumbs are the little "trail" you see at the top of the buffer
+          Breadcrumbs are the little "trail" you see at the top of the editor window.
           """
 
         p class: "max-w-2xl" do
@@ -172,9 +172,9 @@ defmodule ElixirTools.NextLSPage do
 
         c &markdown/1,
           text: """
-          Many editors allow you to also "fuzzy find" the document symbols, similarly to how you would search for a file to open.
+          Many editors allow you to "fuzzy find" the document symbols, similarly to how you would search for a file to open.
 
-          The screenshot demonstrates this using the [fzf-lua](https://github.com/ibhagwan/fzf-lua) Neovim plugin.
+          This screenshot demonstrates this using the [fzf-lua](https://github.com/ibhagwan/fzf-lua) Neovim plugin.
           """
 
         p class: "max-w-2xl" do
