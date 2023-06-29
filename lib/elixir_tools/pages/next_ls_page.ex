@@ -134,6 +134,8 @@ defmodule ElixirTools.NextLSPage do
           Document Symbols are similar to Workspace Symbols, but provide the symbols _only_ for the currently open document.
 
           They also have an intrinsic hierarchy that makes them useful for seeing the relationship between the document's modules, structs, and functions.
+
+          Below are several common editor features that are powered by Document Symbols.
           """
 
         h5 id: "document-symbols-breadcrumbs", class: "font-medium text-gray-800 py-2 mb-4" do
