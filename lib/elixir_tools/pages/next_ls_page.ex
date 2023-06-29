@@ -41,7 +41,7 @@ defmodule ElixirTools.NextLSPage do
       end
 
       p class: "italic" do
-        "The following videos are using"
+        "The following screenshots and videos are using"
         a href: "https://neovim.io", do: "Neovim"
         "the"
         a href: "https://github.com/elixir-tools/elixir-tools.nvim", do: "elixir-tools.nvim"
@@ -70,6 +70,12 @@ defmodule ElixirTools.NextLSPage do
         li do
           a href: "#workspace-symbols", class: "text-blue-500 hover:underline" do
             "Workspace Symbols"
+          end
+        end
+
+        li do
+          a href: "#document-symbols", class: "text-blue-500 hover:underline" do
+            "Document Symbols"
           end
         end
       end
@@ -130,6 +136,68 @@ defmodule ElixirTools.NextLSPage do
         video src:
                 "https://res.cloudinary.com/mhanberg/video/upload/v1687728999/elixir-tools.dev/next-ls-workspace-symbols.mp4",
               controls: true
+      end
+
+      h4 id: "document-symbols", class: "font-medium text-lg text-gray-800 py-2 mb-4" do
+        "Document Symbols"
+      end
+
+      p do
+        "Document Symbols are similar to Workspace Symbols, but provide the symbols"
+        span class: "italic", do: "only"
+        "for the currently open document."
+      end
+
+      p do
+        ~s|They also have an intrinsic hierarchy that makes the useful for seeing the relationship between the documents modules, structs, and functions.|
+      end
+
+      h5 id: "document-symbols-breadcrumbs", class: "font-medium text-gray-800 py-2 mb-4" do
+        "Breadcrumbs"
+      end
+
+      p do
+        ~s|Breadcrumbs are the little "trail" you see at the top of the buffer|
+      end
+
+      p class: "max-w-2xl" do
+        img src:
+              "https://res.cloudinary.com/mhanberg/image/upload/v1688007824/elixir-tools.dev/doc-symbols.png",
+            alt: "Demonstration of symbol breadcrumbs of Elixir code, powered by NextLS"
+      end
+
+      h5 id: "document-symbols-outline", class: "font-medium text-gray-800 py-2 mb-4" do
+        "Outline"
+      end
+
+      p do
+        ~s|The outline shows you the hierarchy of the entire document, and allows you to jump to a specific symbol.|
+      end
+
+      p class: "max-w-2xl" do
+        img src:
+              "https://res.cloudinary.com/mhanberg/image/upload/v1688007932/elixir-tools.dev/doc-symbols-outilne.png",
+            alt: "Demonstration of symbol outline of Elixir code, powered by NextLS"
+      end
+
+      h5 id: "document-symbols-fuzzy-finder", class: "font-medium text-gray-800 py-2 mb-4" do
+        "Fuzzy Finding"
+      end
+
+      p do
+        ~s|Many editors allow you to also "fuzzy find" the document symbols, similarly to how you would search for a file to open.|
+      end
+
+      p do
+        ~s|The screenshot demonstrates this using the|
+        a href: "https://github.com/ibhagwan/fzf-lua", target: "_blank", do: "fzf-lua"
+        ~s|Neovim plugin.|
+      end
+
+      p class: "max-w-2xl" do
+        img src:
+              "https://res.cloudinary.com/mhanberg/image/upload/v1688008012/elixir-tools.dev/doc-symbols-fzf.png",
+            alt: "Demonstration of symbol fzf of Elixir code, powered by NextLS"
       end
     end
   end
