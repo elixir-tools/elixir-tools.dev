@@ -22,7 +22,7 @@ defmodule ElixirTools.NextLSPage do
         "Still in heavy development, but early adopters are encouraged!"
       end
 
-      p do
+      p class: "inline-flex flex-col" do
         span do
           "GitHub:"
 
