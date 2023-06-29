@@ -112,6 +112,12 @@ defmodule ElixirTools.RootLayout do
                       end
                     end
 
+                    li do
+                      a href: "https://github.com/elixir-tools/elixir-tools.dev", class: "text-white hover:underline" do
+                        "Source Code"
+                      end
+                    end
+
                     li class: "italic text-sm mt-2" do
                       span do: "Built with"
 
