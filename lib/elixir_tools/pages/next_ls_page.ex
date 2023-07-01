@@ -88,7 +88,7 @@ defmodule ElixirTools.NextLSPage do
 
         p class: "max-w-2xl" do
           video src:
-                  "https://res.cloudinary.com/mhanberg/video/upload/v1687729279/elixir-tools.dev/next-ls-compiler-diagnostics.mov",
+                  "https://f005.backblazeb2.com/file/elixir-tools/next-ls-compiler-diagnostics.mp4",
                 controls: true
         end
 
@@ -104,8 +104,7 @@ defmodule ElixirTools.NextLSPage do
           """
 
         p class: "max-w-2xl" do
-          video src:
-                  "https://res.cloudinary.com/mhanberg/video/upload/v1687729108/elixir-tools.dev/next-ls-code-formatting.mov",
+          video src: "https://f005.backblazeb2.com/file/elixir-tools/next-ls-code-formatting.mp4",
                 controls: true
         end
 
@@ -123,7 +122,7 @@ defmodule ElixirTools.NextLSPage do
 
         p class: "max-w-2xl" do
           video src:
-                  "https://res.cloudinary.com/mhanberg/video/upload/v1687728999/elixir-tools.dev/next-ls-workspace-symbols.mp4",
+                  "https://f005.backblazeb2.com/file/elixir-tools/next-ls-workspace-symbols.mp4",
                 controls: true
         end
 
@@ -148,8 +147,7 @@ defmodule ElixirTools.NextLSPage do
           """
 
         p class: "max-w-2xl" do
-          img src:
-                "https://res.cloudinary.com/mhanberg/image/upload/v1688007824/elixir-tools.dev/doc-symbols.png",
+          img src: "https://f005.backblazeb2.com/file/elixir-tools/doc-symbols-breadcrumbs.png",
               alt: "Demonstration of symbol breadcrumbs of Elixir code, powered by NextLS"
         end
 
@@ -163,8 +161,7 @@ defmodule ElixirTools.NextLSPage do
           """
 
         p class: "max-w-2xl" do
-          img src:
-                "https://res.cloudinary.com/mhanberg/image/upload/v1688007932/elixir-tools.dev/doc-symbols-outilne.png",
+          img src: "https://f005.backblazeb2.com/file/elixir-tools/doc-symbols-outilne.png",
               alt: "Demonstration of symbol outline of Elixir code, powered by NextLS"
         end
 
@@ -180,8 +177,7 @@ defmodule ElixirTools.NextLSPage do
           """
 
         p class: "max-w-2xl" do
-          img src:
-                "https://res.cloudinary.com/mhanberg/image/upload/v1688008012/elixir-tools.dev/doc-symbols-fzf.png",
+          img src: "https://f005.backblazeb2.com/file/elixir-tools/doc-symbols-fzf.png",
               alt: "Demonstration of symbol fzf of Elixir code, powered by NextLS"
         end
       end
