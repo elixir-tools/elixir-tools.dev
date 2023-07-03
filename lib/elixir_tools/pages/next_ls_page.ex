@@ -48,31 +48,14 @@ defmodule ElixirTools.NextLSPage do
           "Features"
         end
 
-        ul class: "list-disc ml-4 mb-4" do
-          li do
-            a href: "#compiler-diagnostics", class: "text-blue-500 hover:underline" do
-              "Compiler Diagnostics"
-            end
-          end
-
-          li do
-            a href: "#code-formatting", class: "text-blue-500 hover:underline" do
-              "Code Formatting"
-            end
-          end
-
-          li do
-            a href: "#workspace-symbols", class: "text-blue-500 hover:underline" do
-              "Workspace Symbols"
-            end
-          end
-
-          li do
-            a href: "#document-symbols", class: "text-blue-500 hover:underline" do
-              "Document Symbols"
-            end
-          end
-        end
+        c &markdown/1,
+          text: """
+          - [Compiler Diagnostics](#compiler-diagnostics)
+          - [Code Formatting](#code-formatting)
+          - [Workspace Symbols](#workspace-symbols)
+          - [Document Symbols](#document-symbols)
+          - [Go To Definition](#definition)
+          """
 
         c &feature_header/1,
           title: "Compiler Diagnostics",
@@ -180,6 +163,31 @@ defmodule ElixirTools.NextLSPage do
           img src: "https://f005.backblazeb2.com/file/elixir-tools/doc-symbols-fzf.png",
               alt: "Demonstration of symbol fzf of Elixir code, powered by NextLS"
         end
+
+        c &feature_header/1, title: "Go To Definition", id: "definition", version: "0.5"
+
+        c &markdown/1,
+          text: """
+          NextLS provides the ability to go to the definition of a function, macro, or module!
+          """
+
+        p class: "max-w-2xl" do
+          video src: "https://f005.backblazeb2.com/file/elixir-tools/next-ls-goto-definition.mp4",
+                controls: true
+        end
+
+        c &markdown/1,
+          text: """
+          The following still needs to be implemented:
+
+          - [local variables](https://github.com/elixir-tools/next-ls/issues/85)
+          - [module attributes](https://github.com/elixir-tools/next-ls/issues/86)
+          - [captured functions](https://github.com/elixir-tools/next-ls/issues/87)
+          - [inside `quote` blocks](https://github.com/elixir-tools/next-ls/issues/88)
+          - [modules inside alias calls](https://github.com/elixir-tools/next-ls/issues/89)
+          - [inside test files](https://github.com/elixir-tools/next-ls/issues/90)
+          - [dependency definitions](https://github.com/elixir-tools/next-ls/issues/91)
+          """
       end
     end
   end

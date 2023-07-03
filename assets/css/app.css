@@ -17,3 +17,7 @@ p {
 a:not(data-css-override) {
   @apply text-blue-500 hover:underline;
 }
+
+ul {
+  @apply list-disc ml-4 mb-4
+}
