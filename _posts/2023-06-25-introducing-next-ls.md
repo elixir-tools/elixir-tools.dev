@@ -131,7 +131,7 @@ The purpose of this announcement is to declare that Next LS is **ready for early
 
 Next LS hasn't reached feature parity with [Elixir LS](https://github.com/elixir-lsp/elixir-ls), so I don't expect the majority of Elixir developers to switch just yet. But I believe it has developed enough for those who like to live on the bleeding edge and aren't satisfied with their current experience.
 
-There will be bugs, and the more people that are using it for their daily work, the faster the kinks will be ironed out and bring more momentum to the project.
+There will be bugs, and the more people that are using it for their daily work, the faster the kinks will iron out and bring more momentum to the project.
 
 If you have ideas for features or want to contribute, feel absolutely free to check out the GitHub repository!
 
