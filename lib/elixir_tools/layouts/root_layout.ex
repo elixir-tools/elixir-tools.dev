@@ -21,7 +21,7 @@ defmodule ElixirTools.RootLayout do
           link rel: "stylesheet", href: "/css/site.css"
         end
 
-        body class: "font-sans" do
+        body class: "font-sans dark:bg-gray-950 dark:text-white" do
           div id: "the-universe" do
             header class: "container mx-auto px-2" do
               section class: "py-2" do
@@ -31,7 +31,8 @@ defmodule ElixirTools.RootLayout do
                   end
 
                   h1 do
-                    a href: "/", class: "font-medium text-2xl text-gray-800 hover:underline" do
+                    a href: "/",
+                      class: "font-medium text-2xl text-gray-800 dark:text-white hover:underline" do
                       "elixir-tools"
                     end
                   end
@@ -45,7 +46,7 @@ defmodule ElixirTools.RootLayout do
               render(@inner_content)
             end
 
-            footer class: "bg-gray-900 text-white py-4 " do
+            footer class: "bg-gray-900 text-white mt-16 py-4 " do
               div class:
                     "container mx-auto px-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-16 gap-y-8" do
                 div do
@@ -113,7 +114,8 @@ defmodule ElixirTools.RootLayout do
                     end
 
                     li do
-                      a href: "https://github.com/elixir-tools/elixir-tools.dev", class: "text-white hover:underline" do
+                      a href: "https://github.com/elixir-tools/elixir-tools.dev",
+                        class: "text-white hover:underline" do
                         "Source Code"
                       end
                     end
@@ -129,7 +131,9 @@ defmodule ElixirTools.RootLayout do
                         href: "https://tailwindcss.com",
                         do: "TailwindCSS,"
 
-                      " and ♥"
+                      " and"
+
+                      span class: "text-red-500", do: "♥"
                     end
                   end
                 end

@@ -9,14 +9,14 @@ defmodule ElixirTools.NextLSPage do
 
   def template(_assigns) do
     temple do
-      section class: "max-w-5xl" do
-        h2 class: "font-medium text-2xl text-gray-800 py-2 mb-4" do
-          "NextLS"
+      section id: "next-ls", class: "max-w-5xl" do
+        h2 class: "font-medium text-2xl text-gray-800 dark:text-white py-2 mb-4" do
+          "Next LS"
         end
 
         c &markdown/1,
           text: """
-          NextLS is the language server for Elixir that _just works._
+          Next LS is the language server for Elixir that _just works._
 
           Still in heavy development, but early adopters are encouraged!
           """
@@ -44,7 +44,7 @@ defmodule ElixirTools.NextLSPage do
           _The following screenshots and videos are using [Neovim](https://neovim.io), the [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim) plugin, and the [Kanagawa (dragon)](https://github.com/rebelot/kanagawa.nvim) colorscheme._
           """
 
-        h3 class: "font-medium text-xl text-gray-800 py-2" do
+        h3 class: "font-medium text-xl text-gray-800 dark:text-white py-2" do
           "Features"
         end
 
@@ -64,9 +64,9 @@ defmodule ElixirTools.NextLSPage do
 
         c &markdown/1,
           text: """
-          NextLS provides extremely snappy compiler diagnostics for warnings and errors emitted by the Elixir compiler.
+          Next LS provides extremely snappy compiler diagnostics for warnings and errors emitted by the Elixir compiler.
 
-          It compiles and loads your code in it's own Erlang node, so it's completely isolated from NextLS's code.
+          It compiles and loads your code in it's own Erlang node, so it's completely isolated from Next LS's code.
           """
 
         p class: "max-w-2xl" do
@@ -79,7 +79,7 @@ defmodule ElixirTools.NextLSPage do
 
         c &markdown/1,
           text: """
-          NextLS provides extremely fast code formatting.
+          Next LS provides extremely fast code formatting.
 
           It formats your code in it's own Erlang node, so it always respects your formatter configuration and formatter plugins.
 
@@ -98,7 +98,7 @@ defmodule ElixirTools.NextLSPage do
 
         c &markdown/1,
           text: """
-          NextLS can provide symbol lookup for your entire codebase.
+          Next LS can provide symbol lookup for your entire codebase.
 
           With the click of a few buttons, you can search through all of your modules, functions, macros, and structs!
           """
@@ -120,7 +120,8 @@ defmodule ElixirTools.NextLSPage do
           Below are several common editor features that are powered by Document Symbols.
           """
 
-        h5 id: "document-symbols-breadcrumbs", class: "font-medium text-gray-800 py-2 mb-4" do
+        h5 id: "document-symbols-breadcrumbs",
+           class: "font-medium text-gray-800 dark:text-white py-2 mb-4" do
           "Breadcrumbs"
         end
 
@@ -131,10 +132,11 @@ defmodule ElixirTools.NextLSPage do
 
         p class: "max-w-2xl" do
           img src: "https://f005.backblazeb2.com/file/elixir-tools/doc-symbols-breadcrumbs.png",
-              alt: "Demonstration of symbol breadcrumbs of Elixir code, powered by NextLS"
+              alt: "Demonstration of symbol breadcrumbs of Elixir code, powered by Next LS"
         end
 
-        h5 id: "document-symbols-outline", class: "font-medium text-gray-800 py-2 mb-4" do
+        h5 id: "document-symbols-outline",
+           class: "font-medium text-gray-800 dark:text-white py-2 mb-4" do
           "Outline"
         end
 
@@ -145,10 +147,11 @@ defmodule ElixirTools.NextLSPage do
 
         p class: "max-w-2xl" do
           img src: "https://f005.backblazeb2.com/file/elixir-tools/doc-symbols-outilne.png",
-              alt: "Demonstration of symbol outline of Elixir code, powered by NextLS"
+              alt: "Demonstration of symbol outline of Elixir code, powered by Next LS"
         end
 
-        h5 id: "document-symbols-fuzzy-finder", class: "font-medium text-gray-800 py-2 mb-4" do
+        h5 id: "document-symbols-fuzzy-finder",
+           class: "font-medium text-gray-800 dark:text-white py-2 mb-4" do
           "Fuzzy Finding"
         end
 
@@ -161,14 +164,14 @@ defmodule ElixirTools.NextLSPage do
 
         p class: "max-w-2xl" do
           img src: "https://f005.backblazeb2.com/file/elixir-tools/doc-symbols-fzf.png",
-              alt: "Demonstration of symbol fzf of Elixir code, powered by NextLS"
+              alt: "Demonstration of symbol fzf of Elixir code, powered by Next LS"
         end
 
         c &feature_header/1, title: "Go To Definition", id: "definition", version: "0.5"
 
         c &markdown/1,
           text: """
-          NextLS provides the ability to go to the definition of a function, macro, or module!
+          Next LS provides the ability to go to the definition of a function, macro, or module!
           """
 
         p class: "max-w-2xl" do
@@ -194,14 +197,16 @@ defmodule ElixirTools.NextLSPage do
 
   def markdown(assigns) do
     temple do
-      Earmark.as_html!(@text)
+      section class: "prose dark:prose-invert" do
+        Earmark.as_html!(@text)
+      end
     end
   end
 
   defp feature_header(assigns) do
     temple do
       div class: "flex justify-between items-center py-2 mb-4" do
-        h4 id: @id, class: "font-medium text-lg text-gray-800" do
+        h4 id: @id, class: "font-medium text-lg text-gray-800 dark:text-white" do
           @title
         end
 

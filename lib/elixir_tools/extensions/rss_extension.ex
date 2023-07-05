@@ -17,10 +17,7 @@ defmodule ElixirTools.RssExtension do
 
     # html
     items =
-      for post <-
-            ElixirTools.PostExtension.posts()
-            |> Enum.sort_by(& &1.date, {:desc, DateTime}),
-          into: "" do
+      for post <- ElixirTools.PostExtension.posts(all: Mix.env() == :dev), into: "" do
         """
             <item>
                <title>#{post.title}</title>
