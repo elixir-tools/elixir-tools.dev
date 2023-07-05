@@ -10,14 +10,190 @@
   grid-template-columns: 100%;
 }
 
-p {
+section#next-ls p,
+section#home p {
   @apply pb-4;
 }
 
-a:not(data-css-override) {
-  @apply text-blue-500 hover:underline;
+a {
+  @apply text-black underline font-medium;
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    @apply text-white underline font-medium;
+  }
 }
 
 ul {
-  @apply list-disc ml-4 mb-4
+  @apply list-disc mb-4;
 }
+
+li {
+  @apply ml-4;
+}
+
+footer ul {
+  @apply list-none;
+}
+
+footer li {
+  @apply ml-0;
+}
+
+pre {
+  @apply p-2 rounded border border-black;
+}
+
+@media (prefers-color-scheme: dark) {
+  pre {
+    @apply p-2 rounded border border-white !text-white;
+  }
+}
+
+.makeup .hll {
+  background-color: #ffffcc;
+}
+.makeup {
+  background-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .makeup {
+    background-color: #000000;
+  }
+}
+.makeup .unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.makeup .c {
+  font-style: italic;
+} /* :comment */
+.makeup .c1 {
+  font-style: italic;
+} /* :comment_single */
+.makeup .ch {
+  font-style: italic;
+} /* :comment_hashbang */
+.makeup .cm {
+  font-style: italic;
+} /* :comment_multiline */
+.makeup .cp {
+  font-style: normal;
+} /* :comment_preproc */
+.makeup .cpf {
+  font-style: normal;
+} /* :comment_preproc_file */
+.makeup .cs {
+  font-style: italic;
+} /* :comment_special */
+.makeup .dl {
+  font-style: italic;
+} /* :string_delimiter */
+.makeup .err {
+  border: #ff0000;
+} /* :error */
+.makeup .ge {
+  font-style: italic;
+} /* :generic_emph */
+.makeup .gh {
+  font-weight: bold;
+} /* :generic_heading */
+.makeup .gp {
+  font-weight: bold;
+} /* :generic_prompt */
+.makeup .gs {
+  font-weight: bold;
+} /* :generic_strong */
+.makeup .gu {
+  font-weight: bold;
+} /* :generic_subheading */
+.makeup .k {
+  font-weight: bold;
+} /* :keyword */
+.makeup .kc {
+  font-weight: bold;
+} /* :keyword_constant */
+.makeup .kd {
+  font-weight: bold;
+} /* :keyword_declaration */
+.makeup .kn {
+  font-weight: bold;
+} /* :keyword_namespace */
+.makeup .kp {
+  font-weight: normal;
+} /* :keyword_pseudo */
+.makeup .kr {
+  font-weight: bold;
+} /* :keyword_reserved */
+.makeup .kt {
+  font-weight: normal;
+} /* :keyword_type */
+.makeup .nc {
+  font-weight: bold;
+} /* :name_class */
+.makeup .ne {
+  font-weight: bold;
+} /* :name_exception */
+.makeup .ni {
+  font-weight: bold;
+} /* :name_entity */
+.makeup .nn {
+  font-weight: bold;
+} /* :name_namespace */
+.makeup .nt {
+  font-weight: bold;
+} /* :name_tag */
+.makeup .ow {
+  font-weight: bold;
+} /* :operator_word */
+.makeup .s {
+  font-style: italic;
+} /* :string */
+.makeup .s1 {
+  font-style: italic;
+} /* :string_single */
+.makeup .s2 {
+  font-style: italic;
+} /* :string_double */
+.makeup .sa {
+  font-style: italic;
+} /* :string_affix */
+.makeup .sb {
+  font-style: italic;
+} /* :string_backtick */
+.makeup .sc {
+  font-style: italic;
+} /* :string_char */
+.makeup .sd {
+  font-style: italic;
+} /* :string_doc */
+.makeup .se {
+  font-style: italic;
+  font-weight: bold;
+} /* :string_escape */
+.makeup .sh {
+  font-style: italic;
+} /* :string_heredoc */
+.makeup .si {
+  font-style: italic;
+  font-weight: bold;
+} /* :string_interpol */
+.makeup .sr {
+  font-style: italic;
+} /* :string_regex */
+.makeup .ss {
+  font-style: italic;
+} /* :string_symbol */
+.makeup .sx {
+  font-style: italic;
+} /* :string_other */
+.makeup .sx {
+  font-style: italic;
+} /* :string_sigil */

@@ -24,12 +24,22 @@ defmodule ElixirTools.PostExtension do
     as: :posts,
     highlighters: [:makeup_elixir]
 
-  def posts() do
+  def posts(opts \\ []) do
+    all? = Keyword.get(opts, :all, false)
+
     @posts
+    |> Enum.sort_by(& &1.date, {:desc, DateTime})
+    |> then(fn posts ->
+      if all? do
+        posts
+      else
+        Enum.reject(posts, &(DateTime.compare(&1.date, DateTime.utc_now()) == :gt))
+      end
+    end)
   end
 
   def run(_site) do
-    for post <- posts() do
+    for post <- posts(all: Mix.env() == :dev) do
       {:module, _module, _binary, _term} =
         Module.create(
           post.id,

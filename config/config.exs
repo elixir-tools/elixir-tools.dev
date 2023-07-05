@@ -2,7 +2,9 @@ import Config
 
 config :tableau, :reloader,
   patterns: [
-    ~r"lib/.*.ex"
+    ~r"lib/.*.ex",
+    ~r"_posts/.*.md",
+    ~r"assets/.*.(css|js)"
   ]
 
 config :temple,
@@ -10,7 +12,7 @@ config :temple,
   attributes: {Temple, :attributes}
 
 config :tailwind,
-  version: "3.2.4",
+  version: "3.3.2",
   default: [
     args: ~w(
     --config=assets/tailwind.config.js
