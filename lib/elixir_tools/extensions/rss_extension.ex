@@ -24,6 +24,7 @@ defmodule ElixirTools.RssExtension do
                <link>https://#{Path.join("www.elixir-tools.dev", post.permalink)}</link>
                <pubDate>#{Calendar.strftime(post.date, "%a, %d %b %Y %X %Z")}</pubDate>
                <guid>http://#{Path.join("www.elixir-tools.dev", post.permalink)}</guid>
+               <description><![CDATA[ #{post.body} ]]></description>
             </item>
         """
       end
