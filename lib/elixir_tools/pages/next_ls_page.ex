@@ -41,7 +41,9 @@ defmodule ElixirTools.NextLSPage do
 
         c &markdown/1,
           text: """
-          _The following screenshots and videos are using [Neovim](https://neovim.io), the [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim) plugin, and the [Kanagawa (dragon)](https://github.com/rebelot/kanagawa.nvim) colorscheme._
+          _The following screenshots and videos are (mostly) using [Neovim](https://neovim.io), the [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim) plugin, and the [Kanagawa (dragon)](https://github.com/rebelot/kanagawa.nvim) colorscheme._
+
+          _Visual Studio Code demonstrations are using the [elixir-tools.vscode](https://github.com/elixir-tools/elixir-tools.nvim) extension._
           """
 
         h3 class: "font-medium text-xl text-gray-800 dark:text-white py-2" do
@@ -55,6 +57,7 @@ defmodule ElixirTools.NextLSPage do
           - [Workspace Symbols](#workspace-symbols)
           - [Document Symbols](#document-symbols)
           - [Go To Definition](#definition)
+          - [Workspace Folders](#workspace-folders)
           """
 
         c &feature_header/1,
@@ -191,6 +194,26 @@ defmodule ElixirTools.NextLSPage do
           - [inside test files](https://github.com/elixir-tools/next-ls/issues/90)
           - [dependency definitions](https://github.com/elixir-tools/next-ls/issues/91)
           """
+
+        c &feature_header/1,
+          title: "Workspace Folders",
+          id: "workspace-folders",
+          version: "0.6"
+
+        c &markdown/1,
+          text: """
+          Next LS provides support for Workspace Folders.
+
+          Workspace Folders allow your editor to open all of your projects at once, and utilize a single Next LS instance to power all of them!
+
+          You can add and remove workspace folders without restarting the editor.
+          """
+
+        p class: "max-w-2xl" do
+          video src:
+                  "https://f005.backblazeb2.com/file/elixir-tools/next-ls-workspace-folders.mp4",
+                controls: true
+        end
       end
     end
   end
