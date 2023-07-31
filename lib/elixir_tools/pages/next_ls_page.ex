@@ -188,7 +188,6 @@ defmodule ElixirTools.NextLSPage do
 
           - [local variables](https://github.com/elixir-tools/next-ls/issues/85)
           - [module attributes](https://github.com/elixir-tools/next-ls/issues/86)
-          - [captured functions](https://github.com/elixir-tools/next-ls/issues/87)
           - [inside `quote` blocks](https://github.com/elixir-tools/next-ls/issues/88)
           - [modules inside alias calls](https://github.com/elixir-tools/next-ls/issues/89)
           - [inside test files](https://github.com/elixir-tools/next-ls/issues/90)
