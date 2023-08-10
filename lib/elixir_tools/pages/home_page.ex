@@ -7,7 +7,18 @@ defmodule ElixirTools.HomePage do
 
   import ElixirTools.PostExtension, only: [posts: 1]
 
-  def template(_assigns) do
+  def header(assigns) do
+    temple do
+      a href: "##{@id}", class: "no-underline" do
+        h2 id: @id,
+           class: "#{@class} hover:after:content-['_#']" do
+          slot @inner_block
+        end
+      end
+    end
+  end
+
+  def template(assigns) do
     temple do
       section id: "home" do
         p do
@@ -28,7 +39,7 @@ defmodule ElixirTools.HomePage do
             do: "GitHub Sponsors."
         end
 
-        h2 class: "text-xl font-medium mt-4 mb-2", do: "Tools"
+        c &header/1, id: "tools", class: "text-xl font-medium mt-4 mb-2", do: "Tools"
 
         p do
           ul do
@@ -41,7 +52,7 @@ defmodule ElixirTools.HomePage do
           end
         end
 
-        h2 class: "text-xl font-medium mt-4 mb-2", do: "News"
+        c &header/1, id: "news", class: "text-xl font-medium mt-4 mb-2", do: "News"
 
         p do
           for post <- posts(all: Mix.env() == :dev) do
@@ -50,9 +61,28 @@ defmodule ElixirTools.HomePage do
                 a href: post.permalink do
                   post.title
                 end
+
                 span do: "(#{Calendar.strftime(post.date, "%Y-%m-%d")})"
               end
             end
+          end
+        end
+
+        c &header/1, id: "sponsors", class: "text-xl font-medium mt-4 mb-8" do
+          "Sponsored by"
+        end
+
+        div class: "flex gap-16" do
+          a href: "https://qdentity.com/", target: "_blank", title: "Qdentity" do
+            img src: "https://f005.backblazeb2.com/file/elixir-tools/sponsors/qdentity.png",
+                class: "h-24"
+          end
+
+          a href: "https://www.nfiindustries.com/solutions/integrated-logistics/",
+            target: "_blank",
+            title: "NFI Integrated Logistics" do
+            img src: "https://f005.backblazeb2.com/file/elixir-tools/sponsors/nfi-industries.jpg",
+                class: "h-24"
           end
         end
       end
