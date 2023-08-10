@@ -44,7 +44,7 @@ defmodule ElixirTools.HomePage do
         p do
           ul do
             for {tool, href, description} <- tools() do
-              li do
+              li class: "leading-loose" do
                 a href: href, do: tool
                 span do: "- " <> description
               end
@@ -72,7 +72,7 @@ defmodule ElixirTools.HomePage do
           "Sponsored by"
         end
 
-        div class: "flex gap-16" do
+        div class: "flex flex-col items-center sm:flex-row gap-16" do
           a href: "https://qdentity.com/", target: "_blank", title: "Qdentity" do
             img src: "https://f005.backblazeb2.com/file/elixir-tools/sponsors/qdentity.png",
                 class: "h-24"

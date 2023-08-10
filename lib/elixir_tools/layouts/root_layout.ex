@@ -6,7 +6,7 @@ defmodule ElixirTools.RootLayout do
     temple do
       "<!DOCTYPE html>"
 
-      html lang: "en" do
+      html lang: "en", class: "text-[18px]" do
         head do
           meta charset: "utf-8"
           meta http_equiv: "X-UA-Compatible", content: "IE=edge"
