@@ -58,6 +58,8 @@ defmodule ElixirTools.NextLSPage do
           - [Document Symbols](#document-symbols)
           - [Go To Definition](#definition)
           - [Workspace Folders](#workspace-folders)
+          - [Pre-built Binaries](#binaries)
+          - [Find References](#find-references)
           """
 
         c &feature_header/1,
@@ -213,6 +215,43 @@ defmodule ElixirTools.NextLSPage do
                   "https://f005.backblazeb2.com/file/elixir-tools/next-ls-workspace-folders.mp4",
                 controls: true
         end
+
+        c &feature_header/1,
+          title: "Pre-built Binaries",
+          id: "binaries",
+          version: "0.8"
+
+        c &markdown/1,
+          text: """
+          Next LS provides pre-built binary executables for common operating systems and architectures.
+
+          This is made possible using [Burrito](https://github.com/burrito-elixir/burrito) 🌯.
+
+          Editor extensions will prompt you to install and will download the appropriate binary from our GitHub releases.
+          """
+
+        p class: "max-w-2xl" do
+          video src:
+                  "https://f005.backblazeb2.com/file/elixir-tools/next-ls-prebuilt-binaries.mp4",
+                controls: true
+        end
+
+        c &feature_header/1,
+          title: "Find References",
+          id: "find-references",
+          version: "0.9"
+
+        c &markdown/1,
+          text: """
+          Next LS provides support for Find References.
+
+          This allows you to see all usages of a module or function throughout your codebase. It works for your application code as well as references to standard lib and dependencies.
+          """
+
+        p class: "max-w-2xl" do
+          video src: "https://f005.backblazeb2.com/file/elixir-tools/next-ls-find-references.mp4",
+                controls: true
+        end
       end
     end
   end
@@ -227,8 +266,9 @@ defmodule ElixirTools.NextLSPage do
 
   defp feature_header(assigns) do
     temple do
-      div class: "flex justify-between items-center py-2 mb-4" do
-        h4 id: @id, class: "font-medium text-lg text-gray-800 dark:text-white" do
+      a href: "##{@id}", class: "flex justify-between items-center py-2 mb-4 no-underline" do
+        h4 id: @id,
+           class: "font-medium text-lg text-gray-800 dark:text-white hover:after:content-['_#']" do
           @title
         end
 
