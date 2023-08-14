@@ -73,7 +73,7 @@ You can sponsor the project on [GitHub](https://github.com/sponsors/mhanberg).
 
 I'd like to give a small spotlight on one under the hood change.
 
-The original version of the "symbol table" that powers Go To Definition and Workspace Symbols was powered by [DETS](https://erlang.org/doc/man/dets.html)
+The original version of the "symbol table" that powers Go To Definition and Workspace Symbols was powered by [DETS](https://erlang.org/doc/man/dets.html).
 
 This worked out alright at first, but ended up being quite unergonomic (is that a word?) and a pain to debug.
 
