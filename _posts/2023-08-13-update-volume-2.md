@@ -9,6 +9,8 @@ layout: ElixirTools.PostLayout
 
 # The elixir-tools Update Vol. 2
 
+_August, 14th, 2023_
+
 ---
 
 Welcome to Vol. 2 of the elixir-tools update!
