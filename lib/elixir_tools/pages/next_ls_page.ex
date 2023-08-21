@@ -193,7 +193,6 @@ defmodule ElixirTools.NextLSPage do
           - [inside `quote` blocks](https://github.com/elixir-tools/next-ls/issues/88)
           - [modules inside alias calls](https://github.com/elixir-tools/next-ls/issues/89)
           - [inside test files](https://github.com/elixir-tools/next-ls/issues/90)
-          - [dependency definitions](https://github.com/elixir-tools/next-ls/issues/91)
           """
 
         c &feature_header/1,
