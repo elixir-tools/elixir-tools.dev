@@ -43,7 +43,7 @@ defmodule ElixirTools.NextLSPage do
           text: """
           _The following screenshots and videos are (mostly) using [Neovim](https://neovim.io), the [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim) plugin, and the [Kanagawa (dragon)](https://github.com/rebelot/kanagawa.nvim) colorscheme._
 
-          _Visual Studio Code demonstrations are using the [elixir-tools.vscode](https://github.com/elixir-tools/elixir-tools.nvim) extension._
+          _Visual Studio Code demonstrations are using the [elixir-tools.vscode](https://github.com/elixir-tools/elixir-tools.vscode) extension._
           """
 
         h3 class: "font-medium text-xl text-gray-800 dark:text-white py-2" do
