@@ -73,10 +73,10 @@ defmodule ElixirTools.HomePage do
         end
 
         div class: "flex flex-col items-center sm:flex-row gap-16" do
-          a href: "https://qdentity.com/", target: "_blank", title: "Qdentity" do
-            img src: "https://f005.backblazeb2.com/file/elixir-tools/sponsors/qdentity.png",
-                class: "h-24"
-          end
+          # a href: "https://qdentity.com/", target: "_blank", title: "Qdentity" do
+          #   img src: "https://f005.backblazeb2.com/file/elixir-tools/sponsors/qdentity.png",
+          #       class: "h-24"
+          # end
 
           a href: "https://www.nfiindustries.com/solutions/integrated-logistics/",
             target: "_blank",
@@ -93,13 +93,13 @@ defmodule ElixirTools.HomePage do
     [
       {"Next LS", "/next-ls", "Language Server Protocol implementation for Elixir"},
       {"Credo Language Server", "https://github.com/elixir-tools/credo-language-server",
-       "Langauge Server Protocol implementation for Credo"},
+       "Language Server Protocol implementation for Credo"},
       {"elixir-tools.nvim", "https://github.com/elixir-tools/elixir-tools.nvim",
        "Elixir plugin for Neovim"},
       {"elixir-tools.vscode", "https://github.com/elixir-tools/elixir-tools.vscode",
        "Elixir extension for Visual Studio Code"},
       {"GenLSP", "https://github.com/elixir-tools/gen_lsp",
-       "GenLSP is an OTP behaviour for building langauge server protocol implementations"},
+       "GenLSP is an OTP behaviour for building language server protocol implementations"},
       {"Tableau", "https://github.com/elixir-tools/tableau", "Static site generator"}
     ]
   end
