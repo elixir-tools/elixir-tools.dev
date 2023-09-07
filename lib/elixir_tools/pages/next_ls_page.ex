@@ -60,6 +60,7 @@ defmodule ElixirTools.NextLSPage do
           - [Workspace Folders](#workspace-folders)
           - [Pre-built Binaries](#binaries)
           - [Find References](#find-references)
+          - [Credo Extension](#credo-extension)
           """
 
         c &feature_header/1,
@@ -250,6 +251,27 @@ defmodule ElixirTools.NextLSPage do
         p class: "max-w-2xl" do
           video src: "https://f005.backblazeb2.com/file/elixir-tools/next-ls-find-references.mp4",
                 controls: true
+        end
+
+        c &feature_header/1,
+          title: "Credo Extension",
+          id: "credo-extension",
+          version: "0.10"
+
+        c &markdown/1,
+          text: """
+          Next LS provides a built-in extension for Credo!
+
+          This extension currently displays Credo diagnostics in your editor, if it detects Credo in included in your project.
+
+          If you _don't_ use Credo, nothing to worry about, it won't impact your experience at all!
+
+          Upcoming features will include all of the Code Actions from [Credo Language Server](https://github.com/elixir-tools/credo-language-server).
+          """
+
+        p class: "max-w-2xl" do
+          img src: "https://f005.backblazeb2.com/file/elixir-tools/next-ls-credo-extension.png",
+              alt: "Demonstration of the Credo extension included with Next LS"
         end
       end
     end
