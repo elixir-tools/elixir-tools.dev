@@ -29,14 +29,6 @@ defmodule ElixirTools.NextLSPage do
               target: "_blank",
               do: "https://github.com/elixir-tools/next-ls"
           end
-
-          span do
-            "Hex:"
-
-            a href: "https://hex.pm/packages/next_ls",
-              target: "_blank",
-              do: "https://hex.pm/packages/next_ls"
-          end
         end
 
         c &markdown/1,
@@ -61,6 +53,7 @@ defmodule ElixirTools.NextLSPage do
           - [Pre-built Binaries](#binaries)
           - [Find References](#find-references)
           - [Credo Extension](#credo-extension)
+          - [Hover](#hover)
           """
 
         c &feature_header/1,
@@ -190,9 +183,7 @@ defmodule ElixirTools.NextLSPage do
           The following still needs to be implemented:
 
           - [local variables](https://github.com/elixir-tools/next-ls/issues/85)
-          - [module attributes](https://github.com/elixir-tools/next-ls/issues/86)
           - [inside `quote` blocks](https://github.com/elixir-tools/next-ls/issues/88)
-          - [modules inside alias calls](https://github.com/elixir-tools/next-ls/issues/89)
           - [inside test files](https://github.com/elixir-tools/next-ls/issues/90)
           """
 
@@ -272,6 +263,23 @@ defmodule ElixirTools.NextLSPage do
         p class: "max-w-2xl" do
           img src: "https://f005.backblazeb2.com/file/elixir-tools/next-ls-credo-extension.png",
               alt: "Demonstration of the Credo extension included with Next LS"
+        end
+
+        c &feature_header/1,
+          title: "Hover",
+          id: "hover",
+          version: "0.12"
+
+        c &markdown/1,
+          text: """
+          Next LS has support for showing module and function documentation on hover.
+
+          Not much else to it, enjoy!
+          """
+
+        p class: "max-w-2xl" do
+          img src: "https://f005.backblazeb2.com/file/elixir-tools/next-ls-hover.png",
+              alt: "Demonstration of showing documentation on hover with Next LS"
         end
       end
     end
