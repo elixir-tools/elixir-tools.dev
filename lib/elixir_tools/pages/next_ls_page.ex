@@ -38,6 +38,12 @@ defmodule ElixirTools.NextLSPage do
           _Visual Studio Code demonstrations are using the [elixir-tools.vscode](https://github.com/elixir-tools/elixir-tools.vscode) extension._
           """
 
+        p do
+          a href: "#getting-started" do
+            "Jump to Getting Started 👇"
+          end
+        end
+
         h3 class: "font-medium text-xl text-gray-800 dark:text-white py-2" do
           "Features"
         end
@@ -281,6 +287,93 @@ defmodule ElixirTools.NextLSPage do
           img src: "https://f005.backblazeb2.com/file/elixir-tools/next-ls-hover.png",
               alt: "Demonstration of showing documentation on hover with Next LS"
         end
+
+        hr class: "my-8"
+
+        a href: "#getting-started",
+          class: "flex justify-between items-center py-2 mb-4 no-underline" do
+          h3 id: "getting-started",
+             class:
+               "font-medium text-2xl text-gray-800 dark:text-white hover:after:content-['_#']" do
+            "Getting Started"
+          end
+        end
+
+        c &markdown/1,
+          text: """
+          ### Editor Support
+
+          * Neovim: [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim)
+          * VSCode: [elixir-tools.vscode](https://github.com/elixir-tools/elixir-tools.vscode)
+          * Emacs
+
+            Using eglot:
+
+            ```elisp
+            (require 'eglot)
+
+            (add-to-list 'exec-path "path/to/next-ls/bin/")
+
+            (with-eval-after-load 'eglot
+            (add-to-list 'eglot-server-programs
+                 `((elixir-ts-mode heex-ts-mode elixir-mode) .
+                   ("nextls" "--stdio=true"))))
+
+            (add-hook 'elixir-mode-hook 'eglot-ensure)
+            (add-hook 'elixir-ts-mode-hook 'eglot-ensure)
+            (add-hook 'heex-ts-mode-hook 'eglot-ensure)
+            ```
+
+          * Helix
+
+            Add the following config to your `~/.config/helix/languages.toml`.
+
+            ```toml
+            [[language]]
+            name = "elixir"
+            scope = "source.elixir"
+            language-server = { command = "path/to/next-ls", args = ["--stdio=true"] }
+            ```
+
+            If you are using the latest git version of helix use this:
+
+            ```toml
+            [[language]]
+            name = "elixir"
+            scope = "source.elixir"
+            language-servers = ["nextls"]
+
+            [language-server.nextls]
+            command = "path/to/next-ls"
+            args = ["--stdio=true"]
+            ```
+
+          ### Installation
+
+          #### Editor Extensions
+
+          The preferred way to use Next LS is through one of the supported editor extensions.
+
+          The extension will automatically install the latest version of Next LS and will be kept up to date automatically.
+
+          #### Homebrew
+
+          ```bash
+          $ brew install elixir-tools/tap/next-ls
+          ```
+
+          #### Nix
+
+          ```bash
+          $ nix profile install github:elixir-tools/next-ls
+          ```
+
+          #### GitHub Releases
+
+          If you need to install Next LS on it's own, you can download the appropriate executable from our [GitHub Releases](https://github.com/elixir-tools/next-ls/releases).
+
+          These executables are created with [Burrito](https://github.com/burrito-elixir/burrito) and are completely standalone, except you'll still need Elixir and OTP installed in order for it to start a runtime for your application code.
+          """
       end
     end
   end

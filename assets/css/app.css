@@ -10,10 +10,17 @@
   grid-template-columns: 100%;
 }
 
+
+section#next-ls li > p {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
 section#next-ls p,
 section#home p {
   @apply pb-4;
 }
+
 
 a {
   @apply text-black underline font-medium;
@@ -49,6 +56,10 @@ pre {
   pre {
     @apply p-2 rounded border border-white !text-white;
   }
+}
+
+pre {
+  @apply overflow-x-auto;
 }
 
 .makeup .hll {
