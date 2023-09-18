@@ -87,6 +87,13 @@ defmodule ElixirTools.RootLayout do
                         "Twitter"
                       end
                     end
+
+                    li do
+                      a href: "https://discord.gg/6XdGnxVA2A",
+                        class: "text-white hover:underline" do
+                        "Discord"
+                      end
+                    end
                   end
                 end
 
