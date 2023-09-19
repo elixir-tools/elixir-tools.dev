@@ -28,7 +28,6 @@ This month was filled with _boring_ infrastructure improvements as well as some 
   - [Frank Hunleth](https://github.com/fhunleth)
   - [RoboZoom](https://github.com/RoboZoom)
 
-
 ## Auto Update
 
 Next LS now has a built in auto update mechanism!
