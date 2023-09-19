@@ -21,7 +21,7 @@ defmodule ElixirTools.RootLayout do
           link rel: "stylesheet", href: "/css/site.css"
         end
 
-        body class: "font-sans dark:bg-gray-950 dark:text-white" do
+        body class: "font-sans dark:bg-gradient-to-br dark:from-gray-950 dark:via-gray-900 dark:bg-gray-900 dark:text-white" do
           div id: "the-universe" do
             header class: "container mx-auto px-2" do
               section class: "py-2" do
