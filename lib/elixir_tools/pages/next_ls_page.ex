@@ -184,15 +184,6 @@ defmodule ElixirTools.NextLSPage do
                 controls: true
         end
 
-        c &markdown/1,
-          text: """
-          The following still needs to be implemented:
-
-          - [local variables](https://github.com/elixir-tools/next-ls/issues/85)
-          - [inside `quote` blocks](https://github.com/elixir-tools/next-ls/issues/88)
-          - [inside test files](https://github.com/elixir-tools/next-ls/issues/90)
-          """
-
         c &feature_header/1,
           title: "Workspace Folders",
           id: "workspace-folders",
