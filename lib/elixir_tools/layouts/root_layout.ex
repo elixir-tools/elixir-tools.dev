@@ -24,7 +24,7 @@ defmodule ElixirTools.RootLayout do
         body class:
                "font-sans dark:bg-gradient-to-br dark:from-zinc-950 dark:via-zinc-900 dark:bg-zinc-900 dark:text-white" do
           div id: "the-universe" do
-            header class: "top-0 sticky w-full bg-white dark:bg-zinc-900 mx-auto p-2 mb-8" do
+            header class: "top-0 sticky w-full bg-white dark:bg-zinc-900 mx-auto p-2 mb-8 border-b-2 border-white" do
               section class: "container flex justify-between items-center mx-auto py-2" do
                 div class: "flex items-center space-x-2" do
                   a href: "/", class: "hover:underline" do
