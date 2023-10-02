@@ -55,7 +55,7 @@ defmodule ElixirTools.RootLayout do
               render(@inner_content)
             end
 
-            footer class: "bg-zinc-900 text-white mt-16 py-4 " do
+            footer class: "bg-zinc-900 text-white mt-16 py-4 border-t-2 border-white" do
               div class:
                     "container mx-auto px-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-16 gap-y-8" do
                 div do
