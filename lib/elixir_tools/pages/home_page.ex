@@ -72,7 +72,7 @@ defmodule ElixirTools.HomePage do
           "Sponsored by"
         end
 
-        div class: "flex flex-col items-center sm:flex-row gap-16" do
+        div class: "flex flex-col items-center sm:flex-row gap-12" do
           # a href: "https://qdentity.com/", target: "_blank", title: "Qdentity" do
           #   img src: "https://f005.backblazeb2.com/file/elixir-tools/sponsors/qdentity.png",
           #       class: "h-24"
@@ -82,7 +82,14 @@ defmodule ElixirTools.HomePage do
             target: "_blank",
             title: "NFI Integrated Logistics" do
             img src: "https://f005.backblazeb2.com/file/elixir-tools/sponsors/nfi-industries.jpg",
-                class: "h-24"
+                class: "h-24 rounded"
+          end
+
+          a href: "https://www.supered.io",
+            target: "_blank",
+            title: "Supered" do
+            img src: "https://f005.backblazeb2.com/file/elixir-tools/SuperedPink500x500.png",
+                class: "h-24 rounded"
           end
         end
       end
