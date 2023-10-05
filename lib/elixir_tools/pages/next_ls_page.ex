@@ -296,9 +296,7 @@ defmodule ElixirTools.NextLSPage do
 
           * Neovim: [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim)
           * VSCode: [elixir-tools.vscode](https://github.com/elixir-tools/elixir-tools.vscode)
-          * Emacs
-
-            Using eglot:
+          * Emacs - eglot
 
             ```elisp
             (require 'eglot)
@@ -337,6 +335,41 @@ defmodule ElixirTools.NextLSPage do
             [language-server.nextls]
             command = "path/to/next-ls"
             args = ["--stdio=true"]
+            ```
+
+          * Zed
+
+            [Zed](https://zed.dev)
+
+            Add the following settings (tested with [Zed Preview v0.106.2](https://zed.dev/releases/preview)):
+
+            ```json
+            {
+              "elixir": {
+                "lsp": "next_ls"
+              }
+            }
+            ```
+
+          * Vim - vim-lsp
+
+            [vim-lsp](https://github.com/prabirshrestha/vim-lsp)
+
+            Install Next LS somewhere on your PATH, or instead use an absolute path to the Next LS executable.
+
+            ```vim
+            if executable('nextls')
+                au User lsp_setup call lsp#register_server({
+                    \ 'name': 'next_ls',
+                    \ 'cmd': ["nextls", "--stdio"],
+                    \ 'root_uri':{server_info->lsp#utils#path_to_uri(
+                    \	lsp#utils#find_nearest_parent_file_directory(
+                    \		lsp#utils#get_buffer_path(),
+                    \		['mix.exs']
+                    \	))},
+                    \ 'allowlist': ['elixir'],
+                    \ })
+            endif
             ```
 
           ### Installation
