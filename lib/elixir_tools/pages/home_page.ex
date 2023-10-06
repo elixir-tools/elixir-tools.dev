@@ -11,7 +11,7 @@ defmodule ElixirTools.HomePage do
     temple do
       a href: "##{@id}", class: "no-underline" do
         h2 id: @id,
-           class: "#{@class} hover:after:content-['_#']" do
+           class: "#{assigns[:class]} hover:after:content-['_#']" do
           slot @inner_block
         end
       end

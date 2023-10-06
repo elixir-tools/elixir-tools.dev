@@ -32,7 +32,8 @@ defmodule ElixirTools.NextLSPage do
         a href: "#features",
           class: "flex justify-between items-center py-2 mb-4 no-underline" do
           h3 id: "features",
-             class: "font-medium text-xl text-gray-800 dark:text-white py-2 mt-4 hover:after:content-['_#']" do
+             class:
+               "font-medium text-xl text-gray-800 dark:text-white py-2 mt-4 hover:after:content-['_#']" do
             "Features"
           end
         end
@@ -287,7 +288,7 @@ defmodule ElixirTools.NextLSPage do
         end
 
         c &markdown/1,
-          text: """
+          text: ~S'''
           ### Editor Support
 
           * Neovim: [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim)
@@ -308,6 +309,28 @@ defmodule ElixirTools.NextLSPage do
             (add-hook 'elixir-ts-mode-hook 'eglot-ensure)
             (add-hook 'heex-ts-mode-hook 'eglot-ensure)
             ```
+          * Doom Emacs - eglot
+
+            1. Install `nextls` somewhere on your `PATH`
+            2. Enable `lsp` with eglot in `$DOOMDIR/init.el`
+
+               ```diff
+               - ;; lsp
+               + (lsp +eglot)
+               ```
+
+            2. Enable the Elixir layer with lsp in `$DOOMDIR/init.el`
+
+               ```diff
+               - ;; elixir
+               + (elixir +lsp)
+               ```
+
+            2. Configure the eglot client in `$DOOMDIR/config.el`
+
+               ```elisp
+               (set-eglot-client! 'elixir-mode '("nextls" "--stdio"))
+               ```
 
           * Helix
 
@@ -347,9 +370,9 @@ defmodule ElixirTools.NextLSPage do
             }
             ```
 
-          * Vim - vim-lsp
+          * Vim - prabirshrestha/vim-lsp
 
-            [vim-lsp](https://github.com/prabirshrestha/vim-lsp)
+            [prabirshrestha/vim-lsp](https://github.com/prabirshrestha/vim-lsp)
 
             Install Next LS somewhere on your PATH, or instead use an absolute path to the Next LS executable.
 
@@ -366,6 +389,36 @@ defmodule ElixirTools.NextLSPage do
                     \ 'allowlist': ['elixir'],
                     \ })
             endif
+            ```
+
+          * Vim - yegappan/lsp
+
+            [yegappan/lsp](https://github.com/yegappan/lsp) - requires Vim 9
+
+            Install Next LS somewhere on your PATH, or instead use an absolute path to the Next LS executable.
+
+            ```vim
+            let lspServers = [#{
+              \	  name: 'next_ls',
+              \	  filetype: ['elixir'],
+              \	  path: 'nextls',
+              \	  args: ['--stdio'],
+              \   rootSearchFiles: ['mix.exs']
+              \ }]
+            autocmd VimEnter * call LspAddServer(lspServers)
+            ```
+
+          * Vim - ALE
+
+            Valid once https://github.com/dense-analysis/ale/pull/4626 is merged.
+
+            [ALE](https://github.com/dense-analysis/ale)
+
+            Install Next LS somewhere on your PATH, or instead use an absolute path to the Next LS executable.
+
+            ```vim
+            let g:ale_elixir_next_ls_executable = 'path/to/nextls' " optional, if you want to change the executable that is used
+            let g:ale_linters = {'elixir': ['next_ls']}
             ```
 
           ### Installation
@@ -393,11 +446,13 @@ defmodule ElixirTools.NextLSPage do
           If you need to install Next LS on it's own, you can download the appropriate executable from our [GitHub Releases](https://github.com/elixir-tools/next-ls/releases).
 
           These executables are created with [Burrito](https://github.com/burrito-elixir/burrito) and are completely standalone, except you'll still need Elixir and OTP installed in order for it to start a runtime for your application code.
-          """
+          '''
 
         a href: "#faq",
           class: "flex justify-between items-center py-2 mb-4 no-underline" do
-          h3 id: "faq", class: "font-medium text-xl text-gray-800 dark:text-white py-2 mt-4 hover:after:content-['_#']" do
+          h3 id: "faq",
+             class:
+               "font-medium text-xl text-gray-800 dark:text-white py-2 mt-4 hover:after:content-['_#']" do
             "FAQ"
           end
         end
