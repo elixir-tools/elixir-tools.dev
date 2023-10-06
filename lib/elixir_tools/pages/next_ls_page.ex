@@ -29,8 +29,12 @@ defmodule ElixirTools.NextLSPage do
           * [FAQ](#faq)
           """
 
-        h3 id: "features", class: "font-medium text-xl text-gray-800 dark:text-white py-2 mt-4" do
-          "Features"
+        a href: "#features",
+          class: "flex justify-between items-center py-2 mb-4 no-underline" do
+          h3 id: "features",
+             class: "font-medium text-xl text-gray-800 dark:text-white py-2 mt-4 hover:after:content-['_#']" do
+            "Features"
+          end
         end
 
         c &markdown/1,
@@ -391,8 +395,11 @@ defmodule ElixirTools.NextLSPage do
           These executables are created with [Burrito](https://github.com/burrito-elixir/burrito) and are completely standalone, except you'll still need Elixir and OTP installed in order for it to start a runtime for your application code.
           """
 
-        h3 id: "faq", class: "font-medium text-xl text-gray-800 dark:text-white py-2 mt-4" do
-          "FAQ"
+        a href: "#faq",
+          class: "flex justify-between items-center py-2 mb-4 no-underline" do
+          h3 id: "faq", class: "font-medium text-xl text-gray-800 dark:text-white py-2 mt-4 hover:after:content-['_#']" do
+            "FAQ"
+          end
         end
 
         h4 class: "font-medium text-lg text-gray-800 dark:text-white py-2 mt-4" do
