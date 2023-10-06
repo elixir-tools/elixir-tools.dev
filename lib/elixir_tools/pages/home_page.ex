@@ -20,7 +20,7 @@ defmodule ElixirTools.HomePage do
 
   def template(assigns) do
     temple do
-      section id: "home" do
+      section id: "home", class: "prose prose-invert" do
         p do
           "elixir-tools is a suite of developer tooling and packages for Elixir developers."
         end
@@ -28,23 +28,31 @@ defmodule ElixirTools.HomePage do
         p do
           "The elixir-tools effort is lead by"
 
-          a class: "",
-            href: "https://github.com/mhanberg",
+          a href: "https://github.com/mhanberg",
             do: "Mitchell Hanberg,"
 
           "please considering sponsoring his work through"
 
-          a class: "",
-            href: "https://github.com/sponsors/mhanberg",
+          a href: "https://github.com/sponsors/mhanberg",
             do: "GitHub Sponsors."
         end
 
-        c &header/1, id: "tools", class: "text-xl font-medium mt-4 mb-2", do: "Tools"
+        c &header/1, id: "motivation", do: "Motivation"
+
+        p do
+          "The goal for elixir-tools is to provide tooling good enough that you'd think they were part of the core language project."
+        end
+
+        p do
+          "elixir-tools aims to ensure that the Elixir ecosystem has developer tooling of the highest caliber. Many of the languages with high quality tooling have them built in to the core toolchain or are managed by the language itself (Rust, Go)."
+        end
+
+        c &header/1, id: "tools", do: "Tools"
 
         p do
           ul do
             for {tool, href, description} <- tools() do
-              li class: "leading-loose" do
+              li do
                 a href: href, do: tool
                 span do: "- " <> description
               end
@@ -52,23 +60,20 @@ defmodule ElixirTools.HomePage do
           end
         end
 
-        c &header/1, id: "news", class: "text-xl font-medium mt-4 mb-2", do: "News"
+        c &header/1, id: "news", do: "News"
 
         p do
-          for post <- posts(all: Mix.env() == :dev) do
-            ul do
+          ul do
+            for post <- posts(all: Mix.env() == :dev) do
               li do
-                a href: post.permalink do
-                  post.title
-                end
-
+                a href: post.permalink, do: post.title
                 span do: "(#{Calendar.strftime(post.date, "%Y-%m-%d")})"
               end
             end
           end
         end
 
-        c &header/1, id: "sponsors", class: "text-xl font-medium mt-4 mb-8" do
+        c &header/1, id: "sponsors" do
           "Sponsored by"
         end
 

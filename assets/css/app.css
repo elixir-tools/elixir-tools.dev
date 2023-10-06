@@ -11,14 +11,9 @@
 }
 
 
-section#next-ls li > p {
-  margin: 0px !important;
-  padding: 0px !important;
-}
-
-section#next-ls p,
-section#home p {
-  @apply pb-4;
+img,
+video {
+  @apply my-4;
 }
 
 
