@@ -29,7 +29,7 @@ defmodule ElixirTools.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:tableau, "~> 0.3"},
+      {:tableau, "~> 0.5"},
       {:tz, "~> 0.26.2"},
       {:nimble_publisher, "~> 1.0"},
       {:makeup_elixir, ">= 0.0.0"},

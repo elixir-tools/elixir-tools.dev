@@ -24,7 +24,8 @@ defmodule ElixirTools.RootLayout do
         body class:
                "font-sans dark:bg-gradient-to-br dark:from-zinc-950 dark:via-zinc-900 dark:bg-zinc-900 dark:text-white" do
           div id: "the-universe" do
-            header class: "top-0 sticky w-full bg-white dark:bg-zinc-900 mx-auto p-2 mb-8 border-b-2 border-white" do
+            header class:
+                     "top-0 sticky w-full bg-white dark:bg-zinc-900 mx-auto p-2 mb-8 border-b-2 border-white" do
               section class: "container flex justify-between items-center mx-auto py-2" do
                 div class: "flex items-center space-x-2" do
                   a href: "/", class: "hover:underline" do
@@ -39,12 +40,12 @@ defmodule ElixirTools.RootLayout do
                   end
                 end
 
-                if @inner_content == [ElixirTools.NextLSPage] do
+                if assigns[:github_stars] do
                   a class: "github-button",
-                    href: "https://github.com/elixir-tools/next-ls",
+                    href: "https://github.com/#{@github_stars}",
                     data_size: "large",
                     data_show_count: "true",
-                    aria_label: "Star elixir-tools/next-ls on GitHub" do
+                    aria_label: "Star #{@github_stars} on GitHub" do
                     "Star"
                   end
                 end

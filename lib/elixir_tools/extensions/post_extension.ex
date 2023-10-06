@@ -47,9 +47,10 @@ defmodule ElixirTools.PostExtension do
             @external_resource unquote(post.file)
             use Tableau.Page,
               layout: unquote(post.layout),
-              permalink: unquote(post.permalink)
+              permalink: unquote(post.permalink),
+              extra: unquote(Macro.escape(post))
 
-            def template(_) do
+            def template(_assigns) do
               unquote(post.body)
             end
           end,

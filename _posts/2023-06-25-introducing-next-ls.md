@@ -1,16 +1,10 @@
 %{
-id: Introducing.NextLS,
-title: "Introducing Next LS and an elixir-tools update",
-permalink: "/news/:title",
-date: ~N[2023-07-05 01:00:00],
-layout: ElixirTools.PostLayout
+  id: Introducing.NextLS,
+  title: "Introducing Next LS and an elixir-tools update",
+  permalink: "/news/:title",
+  date: ~N[2023-07-05 01:00:00],
+  layout: ElixirTools.PostLayout
 }
----
-
-# Introducing Next LS and an elixir-tools update
-
-_July, 5th, 2023_
-
 ---
 
 Since the last we've [talked](https://www.mitchellhanberg.com/credo-language-server-and-the-birth-of-elixir-tools/) 78 days ago, a lot has happened. Let's recap!
