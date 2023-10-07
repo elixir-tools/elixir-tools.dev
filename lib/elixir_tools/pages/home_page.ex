@@ -20,7 +20,7 @@ defmodule ElixirTools.HomePage do
 
   def template(assigns) do
     temple do
-      section id: "home", class: "prose prose-invert" do
+      section id: "home", class: "prose dark:prose-invert" do
         p do
           "elixir-tools is a suite of developer tooling and packages for Elixir developers."
         end
