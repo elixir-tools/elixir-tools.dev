@@ -7,11 +7,11 @@ defmodule ElixirTools.PostLayout do
       article class: "mx-auto max-w-4xl mb-8" do
         div class: "flex items-center justify-between" do
           h1 class: "font-bold text-2xl" do
-            @title
+            @page.title
           end
 
           div do
-            Calendar.strftime(@date, "%B %d, %Y")
+            Calendar.strftime(@page.date, "%B %d, %Y")
           end
         end
 

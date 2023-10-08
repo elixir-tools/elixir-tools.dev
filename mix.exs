@@ -16,7 +16,7 @@ defmodule ElixirTools.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:telemetry, :logger]
     ]
   end
 
@@ -29,10 +29,8 @@ defmodule ElixirTools.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:tableau, "~> 0.5"},
-      {:tz, "~> 0.26.2"},
-      {:nimble_publisher, "~> 1.0"},
-      {:makeup_elixir, ">= 0.0.0"},
+      {:tableau, "~> 0.6"},
+      # {:tableau, path: "../tableau"},
       {:temple, "~> 0.12"},
       {:tailwind, "~> 0.2", runtime: Mix.env() == :dev}
     ]

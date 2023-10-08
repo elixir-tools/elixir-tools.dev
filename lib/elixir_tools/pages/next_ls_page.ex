@@ -4,9 +4,8 @@ defmodule ElixirTools.NextLSPage do
   use Tableau.Page,
     layout: ElixirTools.RootLayout,
     permalink: "/next-ls",
-    extra: [
-      github_stars: "elixir-tools/next-ls"
-    ]
+    title: "Next LS",
+    github_stars: "elixir-tools/next-ls"
 
   import Temple
 

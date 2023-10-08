@@ -1,10 +1,9 @@
-%{
-id: Update.Volume2,
-title: "The elixir-tools Update Vol. 2",
-permalink: "/news/:title",
-date: ~N[2023-08-14 01:00:00],
-layout: ElixirTools.PostLayout
-}
+---
+:id: "Update.Volume2"
+:title: "The elixir-tools Update Vol. 2"
+:permalink: "/news/:title"
+:date: "~N[2023-08-14 01:00:00]"
+:layout: "ElixirTools.PostLayout"
 ---
 
 Welcome to Vol. 2 of the elixir-tools update!

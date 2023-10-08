@@ -5,8 +5,6 @@ defmodule ElixirTools.HomePage do
     layout: ElixirTools.RootLayout,
     permalink: "/"
 
-  import ElixirTools.PostExtension, only: [posts: 1]
-
   def header(assigns) do
     temple do
       a href: "##{@id}", class: "no-underline" do
@@ -51,10 +49,10 @@ defmodule ElixirTools.HomePage do
 
         p do
           ul do
-            for {tool, href, description} <- tools() do
+            for tool <- @data["tools"] do
               li do
-                a href: href, do: tool
-                span do: "- " <> description
+                a href: tool["url"], do: tool["name"]
+                span do: "- " <> tool["description"]
               end
             end
           end
@@ -64,7 +62,7 @@ defmodule ElixirTools.HomePage do
 
         p do
           ul do
-            for post <- posts(all: Mix.env() == :dev) do
+            for post <- @posts do
               li do
                 a href: post.permalink, do: post.title
                 span do: "(#{Calendar.strftime(post.date, "%Y-%m-%d")})"
@@ -99,20 +97,5 @@ defmodule ElixirTools.HomePage do
         end
       end
     end
-  end
-
-  def tools() do
-    [
-      {"Next LS", "/next-ls", "Language Server Protocol implementation for Elixir"},
-      {"Credo Language Server", "https://github.com/elixir-tools/credo-language-server",
-       "Language Server Protocol implementation for Credo"},
-      {"elixir-tools.nvim", "https://github.com/elixir-tools/elixir-tools.nvim",
-       "Elixir plugin for Neovim"},
-      {"elixir-tools.vscode", "https://github.com/elixir-tools/elixir-tools.vscode",
-       "Elixir extension for Visual Studio Code"},
-      {"GenLSP", "https://github.com/elixir-tools/gen_lsp",
-       "GenLSP is an OTP behaviour for building language server protocol implementations"},
-      {"Tableau", "https://github.com/elixir-tools/tableau", "Static site generator"}
-    ]
   end
 end

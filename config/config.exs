@@ -23,6 +23,18 @@ config :tailwind,
 
 config :tableau, :assets, tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
 
+config :tableau, :config,
+  url: "http://localhost:4999",
+  timezone: "America/Indiana/Indianapolis"
+
+config :tableau, Tableau.PostExtension, enabled: true, future: true
+config :tableau, Tableau.DataExtension, enabled: true
+
+config :tableau, Tableau.RSSExtension,
+  enabled: true,
+  title: "elixir-tools",
+  description: "The best Elixir dev tooling that has ever existed"
+
 config :elixir, :time_zone_database, Tz.TimeZoneDatabase
 
 import_config "#{Mix.env()}.exs"

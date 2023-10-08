@@ -16,7 +16,12 @@ defmodule ElixirTools.RootLayout do
             script defer: true, data_domain: "elixir-tools.dev", src: "/js/foo.js"
           end
 
-          title do: "elixir-tools"
+          title do
+            [@page[:title], "elixir-tools"]
+            |> Enum.filter(& &1)
+            |> Enum.intersperse("|")
+            |> Enum.join(" ")
+          end
 
           link rel: "stylesheet", href: "/css/site.css"
         end
@@ -63,10 +68,10 @@ defmodule ElixirTools.RootLayout do
                   h4 class: "text-lg font-medium mb-2", do: "Tools"
 
                   ul do
-                    for {tool, href, _} <- ElixirTools.HomePage.tools() do
+                    for tool <- @data["tools"] do
                       li do
-                        a href: href, class: "text-white hover:underline" do
-                          tool
+                        a href: tool["url"], class: "text-white hover:underline" do
+                          tool["name"]
                         end
                       end
                     end
