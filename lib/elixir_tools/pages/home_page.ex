@@ -76,11 +76,6 @@ defmodule ElixirTools.HomePage do
         end
 
         div class: "flex flex-col items-center sm:flex-row gap-12" do
-          # a href: "https://qdentity.com/", target: "_blank", title: "Qdentity" do
-          #   img src: "https://f005.backblazeb2.com/file/elixir-tools/sponsors/qdentity.png",
-          #       class: "h-24"
-          # end
-
           a href: "https://www.nfiindustries.com/solutions/integrated-logistics/",
             target: "_blank",
             title: "NFI Integrated Logistics" do
@@ -93,6 +88,11 @@ defmodule ElixirTools.HomePage do
             title: "Supered" do
             img src: "https://f005.backblazeb2.com/file/elixir-tools/SuperedPink500x500.png",
                 class: "h-24 rounded"
+          end
+
+          a href: "https://qdentity.com/", target: "_blank", title: "Qdentity" do
+            img src: "https://f005.backblazeb2.com/file/elixir-tools/sponsors/qdentity.png",
+                class: "h-24"
           end
         end
       end
