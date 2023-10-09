@@ -45,12 +45,12 @@ defmodule ElixirTools.RootLayout do
                   end
                 end
 
-                if assigns[:github_stars] do
+                if @page[:github_stars] do
                   a class: "github-button",
-                    href: "https://github.com/#{@github_stars}",
+                    href: "https://github.com/#{@page.github_stars}",
                     data_size: "large",
                     data_show_count: "true",
-                    aria_label: "Star #{@github_stars} on GitHub" do
+                    aria_label: "Star #{@page.github_stars} on GitHub" do
                     "Star"
                   end
                 end
