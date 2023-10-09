@@ -12,7 +12,7 @@ defmodule ElixirTools.NextLSPage do
   def template(_assigns) do
     temple do
       section id: "next-ls", class: "max-w-5xl" do
-        h2 class: "font-medium text-2xl text-gray-800 dark:text-white py-2 mb-4" do
+        h2 class: "font-bold text-4xl text-gray-800 dark:text-white py-2 mb-4" do
           "Next LS"
         end
 
