@@ -1,9 +1,9 @@
 ---
-:id: "Update.Volume3"
-:title: "The elixir-tools Update Vol. 3"
-:permalink: "/news/:title"
-:date: "~N[2023-09-19 01:00:00]"
-:layout: "ElixirTools.PostLayout"
+id: "Update.Volume3"
+title: "The elixir-tools Update Vol. 3"
+permalink: "/news/:title"
+date: "~N[2023-09-19 01:00:00]"
+layout: "ElixirTools.PostLayout"
 ---
 
 ## Next LS
