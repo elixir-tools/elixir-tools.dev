@@ -9,7 +9,7 @@ defmodule ElixirTools.NextLSPage do
 
   import Temple
 
-  def template(_assigns) do
+  def template(assigns) do
     temple do
       section id: "next-ls", class: "max-w-5xl" do
         h2 class: "font-bold text-4xl text-gray-800 dark:text-white py-2 mb-4" do
@@ -52,6 +52,7 @@ defmodule ElixirTools.NextLSPage do
           - [Find References](#find-references)
           - [Credo Extension](#credo-extension)
           - [Hover](#hover)
+          - [Completions](#completions)
           """
 
         c &feature_header/1,
@@ -270,6 +271,49 @@ defmodule ElixirTools.NextLSPage do
           img src: "https://f005.backblazeb2.com/file/elixir-tools/next-ls-hover.png",
               alt: "Demonstration of showing documentation on hover with Next LS"
         end
+
+        c &feature_header/1,
+          title: "Completions",
+          id: "completions",
+          version: "0.14"
+
+        c &markdown/1,
+          text: """
+          Next LS supports auto-completions for the following features:
+          """
+
+        div class: "mt-4 mb-8 pl-8" do
+          c &checkbox/1, checked: true, do: "Modules"
+          c &checkbox/1, checked: true, do: "Global remote functions"
+          c &checkbox/1, do: "Local functions"
+          c &checkbox/1, do: "Private functions"
+          c &checkbox/1, do: "Variables/parameters"
+          c &checkbox/1, do: "Module attributes"
+          c &checkbox/1, checked: true, do: "Structs"
+          c &checkbox/1, checked: true, do: "Struct fields"
+          c &checkbox/1, checked: true, do: "Bitstring modifiers"
+          c &checkbox/1, checked: true, do: "Special forms"
+          c &checkbox/1, do: "Kernel functions"
+          c &checkbox/1, do: "Imported functions (eg, `import Foo`)"
+          c &checkbox/1, do: "Aliased modules (eg, `alias Foo.Bar` or `alias Foo.Bar, as: Baz`)"
+          c &checkbox/1, do: "Aliased remote functions"
+          c &checkbox/1, do: "Snippets"
+        end
+
+        p class: "max-w-2xl mb-4" do
+          img src: "https://f005.backblazeb2.com/file/elixir-tools/next-ls-completions-1.png",
+              alt: "Demonstration of function completions with documentation in Next LS"
+        end
+
+        div class: "max-w-2xl text-center italic text-sm mb-4",
+            do: "Function completions with documentation"
+
+        p class: "max-w-2xl mb-4 mt-12" do
+          img src: "https://f005.backblazeb2.com/file/elixir-tools/next-ls-completions-2.png",
+              alt: "Demonstration of struct field completions in Next LS"
+        end
+
+        div class: "max-w-2xl text-center italic text-sm mb-12", do: "Struct field completions"
 
         c &markdown/1,
           text: """
@@ -511,6 +555,19 @@ defmodule ElixirTools.NextLSPage do
         span class: "italic" do
           "Introduced in v#{@version}"
         end
+      end
+    end
+  end
+
+  defp checkbox(assigns) do
+    temple do
+      div class: "flex items-center gap-2" do
+        input type: "checkbox",
+              type: "checkbox",
+              checked: Map.get(assigns, :checked, false),
+              disabled: true
+
+        slot @inner_block
       end
     end
   end
