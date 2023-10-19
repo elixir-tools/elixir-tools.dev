@@ -20,7 +20,7 @@ You can sponsor the project on [GitHub](https://github.com/sponsors/mhanberg).
 
 [Next LS](https://github.com/elixir-tools/next-ls) has had... _another_ tremendous month!
 
-This month was had quite a few bug fixes, some distribution patches, and a couple of very exciting new features!
+This month has had quite a few bug fixes, some distribution patches, and a couple of very exciting new features!
 
 - ~ 7,000 total downloads (estimated, increase of 2,800 from the last update)
   - v0.13.5 was only a few downloads shy of 1,000 before I published a new version, which I think is a solid enough heuristic to say Next LS has about 1,000 users 🤯.
@@ -36,7 +36,7 @@ This month was had quite a few bug fixes, some distribution patches, and a coupl
 
 ### Local Variable Definition and References
 
-Dymtro is back again with another enhancement to go to definition and find references, this time for local variables!
+Dmytro is back again with another enhancement to go to definition and find references, this time for local variables!
 
 This was a tricky problem to solve, as local variables definitions and references are not emitted by the compilation tracers, which are used to fill in the symbol/reference database.
 
