@@ -8,7 +8,7 @@ layout: "ElixirTools.PostLayout"
 
 ## Next LS
 
-[Next LS](https://github.com/elixir-tools/next-ls) has had a _another_ tremendous month!
+[Next LS](https://github.com/elixir-tools/next-ls) has had _another_ tremendous month!
 
 This month was filled with _boring_ infrastructure improvements as well as some awesome new features.
 
@@ -189,9 +189,6 @@ If you'd like to get involved with elixir-tools, there are several ways:
 - Contribute to the community via [Discord](https://discord.gg/6XdGnxVA2A) or [GitHub](https://github.com/orgs/elixir-tools/discussions)
 - Contribute financially via [GitHub Sponsors](https://github.com/sponsors/mhanberg)
 
-
-Welcome to Vol. 3 of the elixir-tools update!
-
 ## Sponsors
 
 - [aayushmau5](https://github.com/aayushmau5)
@@ -221,4 +218,3 @@ Welcome to Vol. 3 of the elixir-tools update!
 - [sorenone](https://github.com/sorenone)
 - [sorentwo](https://github.com/sorentwo)
 - [zyzyva](https://github.com/zyzyva)
-
