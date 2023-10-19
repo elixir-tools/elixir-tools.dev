@@ -39,7 +39,8 @@ defmodule ElixirTools.RootLayout do
 
                   h1 do
                     a href: "/",
-                      class: "font-semibold text-2xl text-gray-800 dark:text-white no-underline hover:underline" do
+                      class:
+                        "font-semibold text-2xl text-gray-800 dark:text-white no-underline hover:underline" do
                       "elixir-tools"
                     end
                   end
