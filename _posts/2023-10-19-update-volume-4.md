@@ -82,7 +82,7 @@ Coming soon will be candidates that require lexical environment information, suc
 
 In order to proceed with the above, I will be helping out with implementing the capabilities in elixir-lang core, you can follow [elixir-lang/elixir#12645](https://github.com/elixir-lang/elixir/issues/12645) for more information.
 
-Snippets are another upcoming, completion related feature, but aren't being help up by anything upstream.
+Snippets are another upcoming, completion related feature, but aren't being held up by anything upstream.
 
 This functionality is based on `IEx.Autocomplete`, and I'd like to give a huge thanks to the Elixir core team for providing such a firm foundation for Next LS to base it's implementation on.
 
