@@ -279,6 +279,23 @@ defmodule ElixirTools.NextLSPage do
 
         c &markdown/1,
           text: """
+          Completions are an awesome way to explore and learn a new API, as well as increase your productivity by orders of magnitude.
+
+          Completions are a new feature in Next LS, and are currently gated behind an experimental flag in order to protect users from instability. You can toggle it on
+          if you would like to use it, but if there are bugs, you can toggle it off and await a patch.
+
+          To enable completions, you must pass the initialization options to the server. You can find the exact settings for your specific editor on their homepage/README, but in general the shape is:
+
+          ```lua
+          {
+            experimental = {
+              completions = {
+                enable = true
+              }
+            }
+          }
+          ```
+
           Next LS supports auto-completions for the following features:
           """
 
