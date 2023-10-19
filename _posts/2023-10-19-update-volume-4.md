@@ -66,7 +66,7 @@ Implemented by [Jon Carstens](https://github.com/jjcarstens)!
 
 This is a big one that a lot of people have been waiting for!
 
-With v0.14.0, preliminary support for auto-completions have been released, gated by an experimental flag. The reason for the flag is so that if there is any instability, a user can toggle it off until more patches have been released.
+With v0.14.0, preliminary support for auto-completions has been released, gated by an experimental flag. The reason for the flag is so that if there is any instability, a user can toggle it off until more patches have been released.
 
 This initial release includes support for the following types of completion candidates:
 
