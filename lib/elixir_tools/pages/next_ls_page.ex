@@ -556,7 +556,7 @@ defmodule ElixirTools.NextLSPage do
   def markdown(assigns) do
     temple do
       section class: "prose dark:prose-invert" do
-        Earmark.as_html!(@text)
+        Tableau.markdown(@text)
       end
     end
   end

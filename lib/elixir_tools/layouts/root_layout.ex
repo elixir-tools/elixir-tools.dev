@@ -165,7 +165,7 @@ defmodule ElixirTools.RootLayout do
           end
 
           if Mix.env() == :dev do
-            c &Tableau.Components.live_reload/1
+            c &Tableau.live_reload/1
           end
 
           script async: true, defer: true, src: "https://buttons.github.io/buttons.js"
