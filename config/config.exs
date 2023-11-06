@@ -41,6 +41,9 @@ config :tableau, Tableau.PostExtension,
   enabled: true,
   future: true
 
+config :tableau, Tableau.PageExtension,
+  enabled: true
+
 config :tableau, ElixirTools.DocExtension, enabled: true
 
 config :tableau, Tableau.DataExtension, enabled: true
