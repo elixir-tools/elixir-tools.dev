@@ -4,21 +4,23 @@ defmodule ElixirTools.PostLayout do
 
   def template(assigns) do
     temple do
-      article class: "mx-auto max-w-4xl mb-8" do
-        div class: "flex items-center justify-between" do
-          h1 class: "font-bold text-2xl" do
-            @page.title
+      main class: "container mx-auto px-2" do
+        article class: "mx-auto max-w-4xl mb-8" do
+          div class: "flex items-center justify-between" do
+            h1 class: "font-bold text-2xl" do
+              @page.title
+            end
+
+            div do
+              Calendar.strftime(@page.date, "%B %d, %Y")
+            end
           end
 
-          div do
-            Calendar.strftime(@page.date, "%B %d, %Y")
+          hr class: "mt-4 mb-8"
+
+          article class: "prose dark:prose-invert" do
+            render(@inner_content)
           end
-        end
-
-        hr class: "mt-4 mb-8"
-
-        article class: "prose dark:prose-invert" do
-          render(@inner_content)
         end
       end
     end

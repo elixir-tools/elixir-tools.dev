@@ -1,2 +1,4 @@
 /js/foo.js https://plausible.io/js/script.js 200
 /api/event https://plausible.io/api/event 200
+
+/next-ls /docs/next-ls/quickstart 301

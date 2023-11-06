@@ -8,6 +8,22 @@ module.exports = {
   content: ["./js/**/*.js", "./lib/**/*.ex"],
   theme: {
     extend: {
+      colors: {
+        'gold': {
+          '50': '#faf9ec',
+          '100': '#f4f1cd',
+          '200': '#ebe19d',
+          '300': '#dfcb65',
+          '400': '#d5b43a',
+          '500': '#c59e2d',
+          '600': '#b78727',
+          '700': '#885c20',
+          '800': '#724b21',
+          '900': '#623f21',
+          '950': '#382110',
+        }
+      },
+
       fontFamily: {
         'sans': ['"Inter"', ...defaultTheme.fontFamily.sans],
         'fancy': ['"Rubik"', ...defaultTheme.fontFamily.sans],
@@ -21,5 +37,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/container-queries"),
+  ],
 };

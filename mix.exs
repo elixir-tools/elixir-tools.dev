@@ -29,8 +29,9 @@ defmodule ElixirTools.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:tableau, "~> 0.8.0"},
+      {:tableau, "~> 0.9.0"},
       # {:tableau, path: "../tableau"},
+      {:floki, "~> 0.34"},
       {:temple, "~> 0.12"},
       {:tailwind, "~> 0.2", runtime: Mix.env() == :dev}
     ]
