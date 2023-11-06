@@ -5,7 +5,7 @@ defmodule ElixirTools.RootLayout do
   def footer(assigns) do
     temple do
       footer id: "footer",
-             class: "@container text-white py-4 border-t-2 border-white z-10 w-full" do
+             class: "@container text-zinc-950 dark:text-white py-4 border-t-2 border-white z-10 w-full" do
         div class:
               "container mx-auto px-2 grid grid-cols-1 @sm:grid-cols-2 @lg:grid-cols-3 @5xl:grid-cols-4 gap-x-16 gap-y-8" do
           div do
@@ -14,7 +14,7 @@ defmodule ElixirTools.RootLayout do
             ul do
               for tool <- @data["tools"] do
                 li do
-                  a href: tool["url"], class: "text-white hover:underline" do
+                  a href: tool["url"], class: "text-zinc-950 dark:text-white hover:underline" do
                     tool["name"]
                   end
                 end
@@ -28,28 +28,28 @@ defmodule ElixirTools.RootLayout do
             ul do
               li do
                 a href: "https://www.elixir-tools.dev",
-                  class: "text-white hover:underline" do
+                  class: "text-zinc-950 dark:text-white hover:underline" do
                   "Website"
                 end
               end
 
               li do
                 a href: "https://github.com/elixir-tools",
-                  class: "text-white hover:underline" do
+                  class: "text-zinc-950 dark:text-white hover:underline" do
                   "GitHub"
                 end
               end
 
               li do
                 a href: "https://twitter.com/elixir_tools",
-                  class: "text-white hover:underline" do
+                  class: "text-zinc-950 dark:text-white hover:underline" do
                   "Twitter"
                 end
               end
 
               li do
                 a href: "https://discord.gg/6XdGnxVA2A",
-                  class: "text-white hover:underline" do
+                  class: "text-zinc-950 dark:text-white hover:underline" do
                   "Discord"
                 end
               end
@@ -62,7 +62,7 @@ defmodule ElixirTools.RootLayout do
             ul do
               li do
                 a href: "https://github.com/sponsors/mhanberg",
-                  class: "text-white hover:underline" do
+                  class: "text-zinc-950 dark:text-white hover:underline" do
                   "Mitchell Hanberg"
                 end
               end
@@ -74,14 +74,14 @@ defmodule ElixirTools.RootLayout do
 
             ul do
               li do
-                a href: "/feed.xml", class: "text-white hover:underline" do
+                a href: "/feed.xml", class: "text-zinc-950 dark:text-white hover:underline" do
                   "RSS"
                 end
               end
 
               li do
                 a href: "https://github.com/elixir-tools/elixir-tools.dev",
-                  class: "text-white hover:underline" do
+                  class: "text-zinc-950 dark:text-white hover:underline" do
                   "Source Code"
                 end
               end
