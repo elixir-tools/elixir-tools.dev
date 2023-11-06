@@ -30,6 +30,7 @@ defmodule ElixirTools.MixProject do
   defp deps do
     [
       {:tableau, "~> 0.8.0"},
+      {:floki, "~> 0.34"},
       # {:tableau, path: "../tableau"},
       {:temple, "~> 0.12"},
       {:tailwind, "~> 0.2", runtime: Mix.env() == :dev}

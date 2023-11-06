@@ -1,5 +1,5 @@
 - name: Next LS
-  url: "/next-ls"
+  url: "/docs/next-ls/quickstart"
   description: "Language Server Protocol implementation for Elixir"
 
 - name: Credo Language Server

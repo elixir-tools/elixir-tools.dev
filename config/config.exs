@@ -3,16 +3,19 @@ import Config
 config :tableau, :reloader,
   patterns: [
     ~r"lib/.*.ex",
-    ~r"_posts/.*.md",
+    ~r"(_posts|_docs)/.*.md",
     ~r"assets/.*.(css|js)"
   ]
+
+config :web_dev_utils, :reload_log, true
+config :web_dev_utils, :reload_url, "'wss://' + location.host + '/ws'"
 
 config :temple,
   engine: EEx.SmartEngine,
   attributes: {Temple, :attributes}
 
 config :tailwind,
-  version: "3.3.2",
+  version: "3.3.5",
   default: [
     args: ~w(
     --config=assets/tailwind.config.js
@@ -26,11 +29,19 @@ config :tableau, :assets, tailwind: {Tailwind, :install_and_run, [:default, ~w(-
 config :tableau, :config,
   url: "http://localhost:4999",
   timezone: "America/Indiana/Indianapolis",
-  markdown: [mdex: [features: [syntax_highlight_theme: "kanagawa"]]]
+  markdown: [
+    mdex: [
+      extension: [header_ids: "", tasklist: true, strikethrough: true],
+      render: [unsafe_: true],
+      features: [syntax_highlight_theme: "kanagawa"]
+    ]
+  ]
 
 config :tableau, Tableau.PostExtension,
   enabled: true,
   future: true
+
+config :tableau, ElixirTools.DocExtension, enabled: true
 
 config :tableau, Tableau.DataExtension, enabled: true
 
