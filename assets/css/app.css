@@ -82,3 +82,7 @@ pre {
 pre {
   @apply overflow-x-auto;
 }
+
+.prose pre.autumn.highlight code {
+  @apply text-sm;
+}

@@ -5,7 +5,8 @@ defmodule ElixirTools.RootLayout do
   def footer(assigns) do
     temple do
       footer id: "footer",
-             class: "@container text-zinc-950 dark:text-white py-4 border-t-2 border-white z-10 w-full" do
+             class:
+               "@container text-zinc-950 dark:text-white py-4 border-t-2 border-zinc-950 dark:border-white z-10 w-full" do
         div class:
               "container mx-auto px-2 grid grid-cols-1 @sm:grid-cols-2 @lg:grid-cols-3 @5xl:grid-cols-4 gap-x-16 gap-y-8" do
           div do
@@ -136,7 +137,7 @@ defmodule ElixirTools.RootLayout do
                "font-sans dark:bg-gradient-to-br dark:from-zinc-950 dark:via-zinc-900 dark:bg-zinc-900 dark:text-white" do
           div id: "the-universe" do
             header class:
-                     "top-0 sticky z-10 w-full bg-white dark:bg-zinc-900 mx-auto p-2 border-b-2 border-white" do
+                     "top-0 sticky z-10 w-full bg-white dark:bg-zinc-900 mx-auto p-2 border-b-2 border-zinc-950 dark:border-white" do
               section class: "container flex justify-between items-center mx-auto py-2" do
                 div class: "flex items-center space-x-2" do
                   a href: "/", class: "hover:underline" do
