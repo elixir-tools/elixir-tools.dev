@@ -48,7 +48,7 @@ defmodule ElixirTools.SidebarLayout do
       div class: "flex h-full" do
         div id: "sidebar",
             class:
-              "hidden z-20 dark:bg-zinc-950 lg:block fixed px-4 w-full lg:w-64 border-r border-white pt-4 h-full overflow-y-auto max-h-[calc(100%-110px)]" do
+              "hidden z-20 bg-white dark:bg-zinc-950 lg:block fixed px-4 w-full lg:w-64 border-r border-white pt-4 h-full overflow-y-auto max-h-[calc(100%-110px)]" do
           aside do
             for {section_header, pages} <- @docs do
               h3 class:
