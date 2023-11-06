@@ -5,7 +5,7 @@ subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"
 layout: ElixirTools.DocLayout
 section: Getting Started
-date: DateTime.utc_now()
+date: ~N[2023-11-06 00:00:00]
 order: 3
 permalink: /docs/next-ls/:title
 ---
