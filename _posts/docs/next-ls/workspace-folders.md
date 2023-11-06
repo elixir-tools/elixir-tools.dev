@@ -8,6 +8,7 @@ section: Features
 date: ~N[2023-11-06 00:00:00]
 order: 10
 permalink: /docs/next-ls/:title
+github_stars: elixir-tools/next-ls
 ---
 
 Next LS provides support for Workspace Folders.

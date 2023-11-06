@@ -8,6 +8,7 @@ section: Help
 date: ~N[2023-11-06 00:00:00]
 order: 2
 permalink: /docs/next-ls/:title
+github_stars: elixir-tools/next-ls
 ---
 
 ## Why a new LSP?

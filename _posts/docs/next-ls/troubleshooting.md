@@ -8,6 +8,7 @@ section: Help
 date: ~N[2023-11-06 00:00:00]
 order: 1
 permalink: /docs/next-ls/:title
+github_stars: elixir-tools/next-ls
 ---
 
 ## Check the logs

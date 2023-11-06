@@ -8,6 +8,7 @@ section: Features
 date: ~N[2023-11-06 00:00:00]
 order: 4
 permalink: /docs/next-ls/:title
+github_stars: elixir-tools/next-ls
 ---
 
 Completions are an awesome way to explore and learn a new API, as well as increase your productivity by orders of magnitude.

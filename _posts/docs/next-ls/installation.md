@@ -8,6 +8,7 @@ section: Getting Started
 date: ~N[2023-11-06 00:00:00]
 order: 2
 permalink: /docs/next-ls/:title
+github_stars: elixir-tools/next-ls
 ---
 
 If you are using one of the first party elixir-tools editor extensions/plugins, Next LS will be auto-installed and updated on your behalf, no extra work needed!

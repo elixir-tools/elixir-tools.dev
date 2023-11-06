@@ -8,6 +8,7 @@ section: Features
 date: ~N[2023-11-06 00:00:00]
 order: 8
 permalink: /docs/next-ls/:title
+github_stars: elixir-tools/next-ls
 ---
 
 Document Symbols are similar to Workspace Symbols, but provide the symbols _only_ for the currently open document.

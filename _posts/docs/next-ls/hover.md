@@ -8,6 +8,7 @@ section: Features
 date: ~N[2023-11-06 00:00:00]
 order: 7
 permalink: /docs/next-ls/:title
+github_stars: elixir-tools/next-ls
 ---
 
 Next LS has support for showing module and function documentation on hover.
