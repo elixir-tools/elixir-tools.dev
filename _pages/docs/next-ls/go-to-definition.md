@@ -19,12 +19,14 @@ Next LS provides the ability to go to the definition of a function, macro, or mo
 
 The following checklist indicates which types of symbols can be followed to their definition.
 
+Subject to change!
+
 - [x] Modules
 - [x] Functions
 - [x] Modules (dependency)
 - [x] Functions (dependency)
-- [x] Variables (dependency)
-- [x] Module Attributes (dependency)
+- [x] Variables
+- [x] Module Attributes
 - [ ] Modules (stdlib)
 - [ ] Functions (stdlib)
 - [ ] Types

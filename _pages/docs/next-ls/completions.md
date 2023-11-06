@@ -36,6 +36,7 @@ To enable completions, you must pass the initialization options to the server. Y
 
 Next LS supports auto-completions for the following features:
 
+
 - [x] Modules
 - [x] Global remote functions
 - [ ] Local functions
@@ -51,6 +52,8 @@ Next LS supports auto-completions for the following features:
 - [ ] Aliased modules (eg, `alias Foo.Bar` or `alias Foo.Bar, as: Baz`)
 - [ ] Aliased remote functions
 - [ ] Snippets
+
+New features coming soon!
 
 ## Settings
 

@@ -21,12 +21,14 @@ This allows you to see all usages of a module or function throughout your codeba
 
 The following checklist indicates which types of symbols can have their references located.
 
+Subject to change!
+
 - [x] Modules
 - [x] Functions
 - [x] Modules (dependency)
 - [x] Functions (dependency)
-- [x] Variables (dependency)
-- [x] Module Attributes (dependency)
+- [x] Variables 
+- [x] Module Attributes
 - [x] Modules (stdlib)
 - [x] Functions (stdlib)
 - [ ] Types
