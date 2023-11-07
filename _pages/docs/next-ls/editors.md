@@ -17,6 +17,10 @@ github_stars: elixir-tools/next-ls
 
 [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim) is a first party elixir-tools editor plugin and will install and manage Next LS for you
 
+### Note
+
+If you are using a Neovim distribution like [LunarVim](https://www.lunarvim.org/), [AstroVim](https://astronvim.com/), or [NVChad](https://nvchad.com/), please make sure to disable any Elixir LSP support that comes out of the box, as it will interfere with `elixir-tools.nvim`. 
+
 ## Vim
 
 Vim can be configured to run Next LS in conjunction with a few different Vim plugins.
