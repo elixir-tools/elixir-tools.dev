@@ -77,6 +77,7 @@ let g:ale_linters = {'elixir': ['next_ls']}
 
 Emacs can be configured to run Next LS in several flavors of Emacs.
 
+### Vanilla Emacs with Eglot
 [eglot](https://github.com/joaotavora/eglot)
 
 ```elisp
@@ -93,9 +94,37 @@ Emacs can be configured to run Next LS in several flavors of Emacs.
 (add-hook 'elixir-ts-mode-hook 'eglot-ensure)
 (add-hook 'heex-ts-mode-hook 'eglot-ensure)
 ```
+### Doom Emacs with LSP-Mode
+[Doom Emacs](https://github.com/doomemacs/doomemacs)
+LSP-Mode is the default LSP for Doom, if you don't know what you're using then use this.
 
----
+1. Install `nextls` somewhere on your `PATH`
+2. Enable `lsp` with lsp-mode in `$DOOMDIR/init.el`
 
+```diff
+- ;; lsp
++ lsp
+```
+
+3. Enable the Elixir layer with lsp in `$DOOMDIR/init.el`
+
+```diff
+- ;; elixir
++ (elixir +lsp)
+```
+
+4. Configure the lsp-mode client in `$DOOMDIR/config.el`
+
+```elisp
+(after! lsp-mode
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection '("nextls" "--stdio"))
+                    :multi-root t
+                    :activation-fn (lsp-activate-on "elixir")
+                    :server-id 'next-ls)))
+```
+
+### Doom Emacs with Eglot
 [Doom Emacs](https://github.com/doomemacs/doomemacs)
 
 1. Install `nextls` somewhere on your `PATH`
