@@ -21,7 +21,7 @@ If you like to download and manage tools yourself, there are several different w
 Next LS can be easily installed using our first party Homebrew Tap.
 
 ```sh
-brew install elixir-tools/tap/nextls
+brew install elixir-tools/tap/next-ls
 ```
 
 ## Nix
