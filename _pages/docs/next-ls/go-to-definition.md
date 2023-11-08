@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.GoToDefinition
 title: Go To Definition
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"

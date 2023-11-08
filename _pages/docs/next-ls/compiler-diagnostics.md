@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.Diagnostics
 title: Compiler Diagnostics
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"

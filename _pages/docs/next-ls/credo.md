@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.Credo
 title: Credo
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"

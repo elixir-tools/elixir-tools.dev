@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.Completions
 title: Completions
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"

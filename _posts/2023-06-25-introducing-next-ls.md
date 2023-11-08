@@ -1,5 +1,4 @@
 ---
-id: "Introducing.NextLS"
 title: "Introducing Next LS and an elixir-tools update"
 permalink: "/news/:title"
 date: "~N[2023-07-05 01:00:00]"

@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.Troubleshooting
 title: Troubleshooting
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"

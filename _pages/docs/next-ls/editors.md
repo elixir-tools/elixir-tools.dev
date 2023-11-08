@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.Editors
 title: Editors
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"

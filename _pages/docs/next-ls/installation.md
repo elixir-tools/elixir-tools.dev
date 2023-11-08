@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.Installation
 title: Installation
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"

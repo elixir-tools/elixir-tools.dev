@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.Formatting
 title: Formatting
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"

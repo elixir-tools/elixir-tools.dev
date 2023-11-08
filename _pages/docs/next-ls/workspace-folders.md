@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.WorkspaceFolders
 title: Workspace Folders
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"

@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.Hover
 title: Hover Documentation
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"

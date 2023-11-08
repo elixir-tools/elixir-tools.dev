@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.FAQ
 title: FAQ
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"

@@ -1,5 +1,4 @@
 ---
-id: Docs.NextLS.WorkspaceSymbols
 title: Workspace Symbols
 subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"
