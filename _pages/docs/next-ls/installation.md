@@ -32,6 +32,10 @@ Next LS can be easily installed using our [Nix](https://nixos.org/) flake.
 nix profile install github:elixir-tools/next-ls
 ```
 
+### Notes
+
+If you run into a `warning: ignoring untrusted substituter 'https://elixir-tools.cachix.org', you are not a trusted user.` message, make sure your user is added to the [`trusted-users`](https://nixos.org/manual/nix/stable/command-ref/conf-file#conf-trusted-users) list.
+
 ## Mason.nvim
 
 If you are a [Mason.nvim](https://github.com/williamboman/mason.nvim) user, you can install and update Next LS easily with Mason.
