@@ -44,8 +44,6 @@ config :tableau, Tableau.PostExtension,
 config :tableau, Tableau.PageExtension,
   enabled: true
 
-config :tableau, ElixirTools.DocExtension, enabled: true
-
 config :tableau, Tableau.DataExtension, enabled: true
 
 config :tableau, Tableau.RSSExtension,
