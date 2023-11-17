@@ -25,14 +25,7 @@ To enable completions, you must pass the initialization options to the server. Y
 }
 ```
 
-For emacs-eglot:
-
-```lisp
-(with-eval-after-load 'eglot
-(add-to-list 'eglot-server-programs
-   `((elixir-ts-mode heex-ts-mode elixir-mode) .
-     ("nextls" "--stdio=true" :initializationOptions (:experimental (:completions (:enable t)))))))
-```
+For configurations examples in your editor refer to: [Editors](/docs/next-ls/editors)
 
 ## Demo
 

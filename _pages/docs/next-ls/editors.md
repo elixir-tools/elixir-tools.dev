@@ -43,8 +43,6 @@ if executable('nextls')
 endif
 ```
 
----
-
 [yegappan/lsp](https://github.com/yegappan/lsp) - requires Vim 9
 
 Install Next LS somewhere on your PATH, or instead use an absolute path to the Next LS executable.
@@ -59,8 +57,6 @@ let lspServers = [#{
 \ }]
 autocmd VimEnter * call LspAddServer(lspServers)
 ```
-
----
 
 [ALE](https://github.com/dense-analysis/ale)
 
@@ -94,6 +90,15 @@ Emacs can be configured to run Next LS in several flavors of Emacs.
 (add-hook 'elixir-mode-hook 'eglot-ensure)
 (add-hook 'elixir-ts-mode-hook 'eglot-ensure)
 (add-hook 'heex-ts-mode-hook 'eglot-ensure)
+```
+
+If you want to set configurations flags (eg. `experiment.completions`)
+
+```elisp
+(with-eval-after-load 'eglot
+(add-to-list 'eglot-server-programs
+   `((elixir-ts-mode heex-ts-mode elixir-mode) .
+     ("nextls" "--stdio=true" :initializationOptions (:experimental (:completions (:enable t)))))))
 ```
 
 ### Doom Emacs with lsp-mode
