@@ -25,6 +25,8 @@ To enable completions, you must pass the initialization options to the server. Y
 }
 ```
 
+For configurations examples in your editor refer to: [Editors](/docs/next-ls/editors)
+
 ## Demo
 
 ![Demonstration of function completions with documentation in Next LS](https://f005.backblazeb2.com/file/elixir-tools/next-ls-completions-1.png)
