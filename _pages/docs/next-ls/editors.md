@@ -77,6 +77,8 @@ let g:ale_linters = {'elixir': ['next_ls']}
 
 Emacs can be configured to run Next LS in several flavors of Emacs.
 
+### Emacs with Eglot
+
 [eglot](https://github.com/joaotavora/eglot)
 
 ```elisp
@@ -94,7 +96,39 @@ Emacs can be configured to run Next LS in several flavors of Emacs.
 (add-hook 'heex-ts-mode-hook 'eglot-ensure)
 ```
 
----
+### Doom Emacs with lsp-mode
+
+[Doom Emacs](https://github.com/doomemacs/doomemacs)
+
+lsp-mode is the default LSP client for Doom.
+
+1. Install `nextls` somewhere on your `PATH`
+2. Enable `lsp` with lsp-mode in `$DOOMDIR/init.el`
+
+```diff
+- ;; lsp
++ lsp
+```
+
+3. Enable the Elixir layer with lsp in `$DOOMDIR/init.el`
+
+```diff
+- ;; elixir
++ (elixir +lsp)
+```
+
+4. Configure the lsp-mode client in `$DOOMDIR/config.el`
+
+```elisp
+(after! lsp-mode
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection '("nextls" "--stdio"))
+                    :multi-root t
+                    :activation-fn (lsp-activate-on "elixir")
+                    :server-id 'next-ls)))
+```
+
+### Doom Emacs with Eglot
 
 [Doom Emacs](https://github.com/doomemacs/doomemacs)
 
@@ -143,7 +177,6 @@ command = "path/to/next-ls"
 args = ["--stdio=true"]
 ```
 
-
 ## Zed
 
 Zed will install and manage Next LS for you.
@@ -157,4 +190,3 @@ Add the following settings (tested with [Zed Preview v0.106.2](https://zed.dev/r
   }
 }
 ```
-
