@@ -92,7 +92,7 @@ Emacs can be configured to run Next LS in several flavors of Emacs.
 (add-hook 'heex-ts-mode-hook 'eglot-ensure)
 ```
 
-If you want to set configurations flags (eg. `experiment.completions`)
+Initialization options can be configured:
 
 ```elisp
 (with-eval-after-load 'eglot
