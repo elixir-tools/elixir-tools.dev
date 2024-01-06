@@ -181,6 +181,32 @@ language-servers = ["nextls"]
 command = "path/to/next-ls"
 args = ["--stdio=true"]
 ```
+### Development
+
+If you are running next-ls from the source code, you'll need to have [netcat](https://netcat.sourceforge.net/) installed in order for helix to communicate with the server over TCP.  
+Assuming the next-ls server runs on port 9000, the LSP configuration should look as follows:
+
+```diff
+[[language]]
+name = "elixir"
+scope = "source.elixir"
+- language-server = { command = "path/to/next-ls", args = ["--stdio=true"] }
++ language-server = { command = "nc", args = ["127.0.0.1", "9000"] }
+```
+If you are using the latest git version of helix use this:
+
+```diff
+[[language]]
+name = "elixir"
+scope = "source.elixir"
+language-servers = ["nextls"]
+
+[language-server.nextls]
+- command = "path/to/next-ls"
+- args = ["--stdio=true"]
++ command = "nc"
++ args = ["127.0.0.1", "9000"]
+```
 
 ## Zed
 
