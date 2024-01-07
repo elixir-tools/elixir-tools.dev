@@ -1,7 +1,7 @@
 ---
 title: "The elixir-tools Update Vol. 2"
-permalink: "/news/:title"
-date: "~N[2023-08-14 01:00:00]"
+permalink: "/news/the-elixir-tools-update-vol-2"
+date: 2023-08-14 01:00:00
 layout: "ElixirTools.PostLayout"
 ---
 
