@@ -183,29 +183,32 @@ args = ["--stdio=true"]
 ```
 ### Development
 
-If you are running next-ls from the source code, you'll need to have [netcat](https://netcat.sourceforge.net/) installed in order for helix to communicate with the server over TCP.  
+If you are running next-ls from the source code, you'll need to communicate with the server over TCP. [It is recommended to use netcat as a proxy.](https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers)
 Assuming the next-ls server runs on port 9000, the LSP configuration should look as follows:
 
-```diff
+```toml
 [[language]]
 name = "elixir"
 scope = "source.elixir"
-- language-server = { command = "path/to/next-ls", args = ["--stdio=true"] }
-+ language-server = { command = "nc", args = ["127.0.0.1", "9000"] }
+language-server = { command = "nc", args = ["127.0.0.1", "9000"] }
 ```
 If you are using the latest git version of helix use this:
 
-```diff
-[[language]]
-name = "elixir"
-scope = "source.elixir"
-language-servers = ["nextls"]
-
+```toml
 [language-server.nextls]
-- command = "path/to/next-ls"
-- args = ["--stdio=true"]
-+ command = "nc"
-+ args = ["127.0.0.1", "9000"]
+command = "nc"
+args = ["127.0.0.1", "9000"]
+```
+
+### Enabling completions
+
+Completions need to be enabled explicitely in the Language Server configuration by passing intialization options under the `config` key.
+
+```toml
+[language-server.nextls]
+command = "path/to/next-ls"
+args = ["--stdio=true"]
+config = { experimental = { completions = { enable = true } } }
 ```
 
 ## Zed
