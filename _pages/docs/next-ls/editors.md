@@ -181,6 +181,34 @@ language-servers = ["nextls"]
 command = "path/to/next-ls"
 args = ["--stdio=true"]
 ```
+### TCP
+
+Helix supports connecting via TCP using `netcat`. https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers
+
+```toml
+[[language]]
+name = "elixir"
+scope = "source.elixir"
+language-server = { command = "nc", args = ["127.0.0.1", "9000"] }
+```
+If you are using the latest git version of helix use this:
+
+```toml
+[language-server.nextls]
+command = "nc"
+args = ["127.0.0.1", "9000"]
+```
+
+### Initialization Options
+
+Initialization options are configured with the `config` key.
+
+```toml
+[language-server.nextls]
+command = "path/to/next-ls"
+args = ["--stdio=true"]
+config = { experimental = { completions = { enable = true } } }
+```
 
 ## Zed
 
