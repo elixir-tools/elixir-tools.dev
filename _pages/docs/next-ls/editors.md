@@ -181,10 +181,9 @@ language-servers = ["nextls"]
 command = "path/to/next-ls"
 args = ["--stdio=true"]
 ```
-### Development
+### TCP
 
-If you are running next-ls from the source code, you'll need to communicate with the server over TCP. [It is recommended to use netcat as a proxy.](https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers)
-Assuming the next-ls server runs on port 9000, the LSP configuration should look as follows:
+Helix supports connecting via TCP using `netcat`. https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers
 
 ```toml
 [[language]]
@@ -200,9 +199,9 @@ command = "nc"
 args = ["127.0.0.1", "9000"]
 ```
 
-### Enabling completions
+### Initialization Options
 
-Completions need to be enabled explicitely in the Language Server configuration by passing intialization options under the `config` key.
+Initialization options are configured with the `config` key.
 
 ```toml
 [language-server.nextls]
