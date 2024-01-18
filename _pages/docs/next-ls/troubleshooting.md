@@ -12,6 +12,11 @@ github_stars: elixir-tools/next-ls
 
 When something seems wrong, the first thing you should do is check the logs!
 
+### Log File
+
+You can `tail` the log file that lives at `.elixir-tools/next-ls.log`.
+
+This log file contains the same logs that are output to the Output Panel in Visual Studio Code and Neovim, and also contains more robust language server logging with timings.
 
 ### Visual Studio Code
 
