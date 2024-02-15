@@ -13,6 +13,11 @@
   grid-template-columns: 100%;
 }
 
+input#docsearch-input {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .anchor {
   text-decoration-line: none;
 }

@@ -131,6 +131,7 @@ defmodule ElixirTools.RootLayout do
           end
 
           link rel: "stylesheet", href: "/css/site.css"
+          link rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3"
         end
 
         body class:
@@ -144,7 +145,7 @@ defmodule ElixirTools.RootLayout do
                     img src: "/elixir-tools-no-background.png", class: "h-8 w-8"
                   end
 
-                  h1 class: "font-semibold text-gray-800 dark:text-white text-base lg:text-2xl " do
+                  div class: "font-semibold text-gray-800 dark:text-white text-base lg:text-2xl " do
                     a href: "/", class: "no-underline hover:underline" do
                       "elixir-tools"
                     end
@@ -163,16 +164,8 @@ defmodule ElixirTools.RootLayout do
                   end
                 end
 
-                div class: "flex flex-col-reverse md:flex-row items-center gap-2" do
-                  if @page[:github_stars] do
-                    a class: "github-button",
-                      href: "https://github.com/#{@page.github_stars}",
-                      data_size: "large",
-                      data_show_count: "true",
-                      aria_label: "Star #{@page.github_stars} on GitHub" do
-                      "Star"
-                    end
-                  end
+                div class: "flex items-center gap-2" do
+                  div id: "search-bar", class: "!focus:outline-0"
 
                   if String.starts_with?(@page.permalink, "/docs") do
                     button class: "block lg:hidden",
@@ -208,6 +201,21 @@ defmodule ElixirTools.RootLayout do
             end
 
             script async: true, defer: true, src: "https://buttons.github.io/buttons.js"
+          end
+
+          script src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3"
+
+          script type: "text/javascript" do
+            """
+            docsearch({
+              appId: "MKR62Z5PWB",
+              apiKey: "7e9769d82a4d1350a379a71bf7390e3c",
+              indexName: "elixir-tools",
+              insights: true,
+              container: '#search-bar',
+              debug: true
+            });
+            """
           end
         end
       end
