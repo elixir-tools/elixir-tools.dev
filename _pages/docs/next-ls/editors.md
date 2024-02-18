@@ -125,6 +125,7 @@ Initialization options can be configured:
           ;; :initialization-options '(:experimental (:completions (:enable t))) ;; Enable the experimental completion mode
           :activation-fn (lsp-activate-on "elixir")
           :server-id 'next-ls)))
+```
 
 ### Doom Emacs with lsp-mode
 
