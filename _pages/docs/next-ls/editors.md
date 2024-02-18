@@ -108,7 +108,7 @@ Initialization options can be configured:
 1. Install `nextls` somewhere on your `PATH`
 2. Configure `lsp-mode`
 
-```
+```elisp
 (use-package lsp-mode
   :ensure t
   :hook (elixir-ts-mode . lsp)
@@ -117,15 +117,14 @@ Initialization options can be configured:
 
 3. Add `nextls` to the `lsp-mode` configuration
 
-```
-		(with-eval-after-load 'lsp-mode
-		  (lsp-register-client
-		   (make-lsp-client :new-connection (lsp-stdio-connection '("nextls" "--stdio" ))
-							:multi-root t
-							;; :initialization-options '(:experimental (:completions (:enable t))) ;; Enable the experimental completion mode
-							:activation-fn (lsp-activate-on "elixir")
-							:server-id 'next-ls)))
-```
+```elisp
+(with-eval-after-load 'lsp-mode
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection '("nextls" "--stdio" ))
+          :multi-root t
+          ;; :initialization-options '(:experimental (:completions (:enable t))) ;; Enable the experimental completion mode
+          :activation-fn (lsp-activate-on "elixir")
+          :server-id 'next-ls)))
 
 ### Doom Emacs with lsp-mode
 
