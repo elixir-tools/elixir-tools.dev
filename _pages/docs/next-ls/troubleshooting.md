@@ -42,26 +42,6 @@ pgrep -fl epmd
 
 If `epmd` is not running, you might need to start it or ensure it starts automatically with your system. You can do this by running `epmd -daemon`.
 
-## Ensure `glibc` version is at least 2.34
-
-`glibc` is the C standard library that the ERTS is dynamically linked against, so it must be present on your computer. But, some operating systems are bundled with a version of `glibc` that is too old for the ERTS.
-
-### Linux:
-
-```bash
-ldd --version
-```
-
-This will show the `glibc` version at the top. Ensure it's 2.34 or higher.
-
-### Mac:
-
-macOS doesn't use `glibc`; it uses the Darwin C Library. Hence, this step is not applicable.
-
-### Windows:
-
-Windows does not use `glibc`. If you're using a subsystem or tool that needs it, ensure it's updated.
-
 ## Open Visual Studio Code from the terminal
 
 To ensure that `elixir` is in your `PATH`, open Visual Studio Code from the terminal using the [command-line tools](https://code.visualstudio.com/docs/editor/command-line#_launching-from-command-line).
