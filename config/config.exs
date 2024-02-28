@@ -2,9 +2,9 @@ import Config
 
 config :tableau, :reloader,
   patterns: [
-    ~r"lib/*.ex",
-    ~r"(_posts|_docs)/.*.md",
-    ~r"assets/*.(css|js)"
+    ~r"lib/.*.ex",
+    ~r"(_posts|_pages)/.*.md",
+    ~r"assets/.*.(css|js)"
   ]
 
 config :web_dev_utils, :reload_log, true
