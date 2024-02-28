@@ -4,6 +4,7 @@ config :tableau, :reloader,
   patterns: [
     ~r"lib/.*.ex",
     ~r"(_posts|_pages)/.*.md",
+    ~r"(_data)/.*.(yaml|yml|exs)",
     ~r"assets/.*.(css|js)"
   ]
 

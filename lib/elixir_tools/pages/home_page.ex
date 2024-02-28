@@ -71,30 +71,38 @@ defmodule ElixirTools.HomePage do
               end
             end
           end
+        end
 
-          c &header/1, id: "sponsors" do
-            "Sponsored by"
+        c &header/1, id: "sponsors", class: "text-2xl mt-16 mb-8" do
+          "Sponsored by"
+        end
+
+        section class: "prose dark:prose-invert mb-8" do
+          p do
+            "elixir-tools is sponsored by a number of awesome companies."
           end
 
-          div class: "flex flex-col items-center sm:flex-row gap-12" do
-            a href: "https://www.nfiindustries.com/solutions/integrated-logistics/",
-              target: "_blank",
-              title: "NFI Integrated Logistics" do
-              img src:
-                    "https://f005.backblazeb2.com/file/elixir-tools/sponsors/nfi-industries.jpg",
-                  class: "h-24 rounded"
-            end
+          p do
+            "If you'd like to see your company's logo on the website, you can sponsor Mitchell Hanberg on "
 
-            a href: "https://www.supered.io",
-              target: "_blank",
-              title: "Supered" do
-              img src: "https://f005.backblazeb2.com/file/elixir-tools/SuperedPink500x500.png",
-                  class: "h-24 rounded"
-            end
+            a href: "https://github.com/sponsors/mhanberg",
+              do: "GitHub Sponsors."
+          end
+        end
 
-            a href: "https://qdentity.com/", target: "_blank", title: "Qdentity" do
-              img src: "https://f005.backblazeb2.com/file/elixir-tools/sponsors/qdentity.png",
-                  class: "h-24"
+        div class: "bg-zinc-800 dark:bg-zinc-900 p-4 rounded" do
+          div class: "flex flex-col flex-wrap items-center sm:flex-row gap-x-24 gap-y-12" do
+            for sponsor <- @data["corporate_sponsors"] do
+              a href: sponsor["url"],
+                target: "_blank",
+                title: sponsor["name"] do
+                if sponsor["svg"] do
+                  sponsor["svg"]
+                else
+                  img src: sponsor["image"],
+                      class: "h-18 sm:h-20 rounded object-cover"
+                end
+              end
             end
           end
         end
