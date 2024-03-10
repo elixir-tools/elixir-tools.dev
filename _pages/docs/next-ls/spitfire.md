@@ -23,3 +23,7 @@ To enable Spitfire, you need to start the LSP with the environment variable `NEX
 If you are using [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim) or [elixir-tools.vscode](https://github.com/elixir-tools/elixir-tools.vscode), there will be plugin specific settings to take care of this for you.
 
 If you are using an editor with more manual setup like Helix, you will need to configure the variable yourself.
+
+### Caution
+
+Spitfire is still experimental, so please report any errors you find!

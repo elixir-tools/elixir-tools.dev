@@ -37,7 +37,6 @@ For configurations examples in your editor refer to: [Editors](/docs/next-ls/edi
 
 Next LS supports auto-completions for the following features:
 
-
 - [x] Modules
 - [x] Global remote functions
 - [ ] Local functions
@@ -48,7 +47,7 @@ Next LS supports auto-completions for the following features:
 - [x] Struct fields
 - [x] Bitstring modifiers
 - [x] Special forms
-- [ ] Kernel functions
+- [x] Kernel functions
 - [ ] Imported functions (eg, `import Foo`)
 - [ ] Aliased modules (eg, `alias Foo.Bar` or `alias Foo.Bar, as: Baz`)
 - [ ] Aliased remote functions

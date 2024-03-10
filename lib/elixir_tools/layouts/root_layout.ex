@@ -42,6 +42,13 @@ defmodule ElixirTools.RootLayout do
               end
 
               li do
+                a href: "https://github.com/sponsors/mhanberg",
+                  class: "text-zinc-950 dark:text-white hover:underline" do
+                  "Sponsor"
+                end
+              end
+
+              li do
                 a href: "https://twitter.com/elixir_tools",
                   class: "text-zinc-950 dark:text-white hover:underline" do
                   "Twitter"

@@ -1,5 +1,6 @@
 - name: Next LS
   url: "/docs/next-ls/quickstart"
+  docs: "/docs/next-ls/quickstart"
   description: "Language Server Protocol implementation for Elixir"
 
 - name: Credo Language Server
@@ -21,3 +22,7 @@
 - name: Tableau
   url: https://github.com/elixir-tools/tableau
   description:  Static site generator
+
+- name: Spitfire
+  url: https://github.com/elixir-tools/spitfire
+  description: Error tolerant parser and library for Elixir

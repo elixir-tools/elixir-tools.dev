@@ -54,6 +54,10 @@ defmodule ElixirTools.HomePage do
                 li do
                   a href: tool["url"], do: tool["name"]
                   span do: "- " <> tool["description"]
+
+                  if tool["docs"] do
+                    a href: tool["docs"], do: "(documentation)"
+                  end
                 end
               end
             end
