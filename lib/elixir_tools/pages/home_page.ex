@@ -96,11 +96,18 @@ defmodule ElixirTools.HomePage do
               a href: sponsor["url"],
                 target: "_blank",
                 title: sponsor["name"] do
-                if sponsor["svg"] do
-                  sponsor["svg"]
-                else
-                  img src: sponsor["image"],
-                      class: "h-18 sm:h-20 rounded object-cover"
+                cond do
+                  sponsor["svg"] ->
+                    sponsor["svg"]
+
+                  sponsor["image"] ->
+                    img src: sponsor["image"],
+                        class: "h-16 sm:h-20 rounded object-cover"
+
+                  true ->
+                    div class: "text-white text-4xl" do
+                      sponsor["name"]
+                    end
                 end
               end
             end
