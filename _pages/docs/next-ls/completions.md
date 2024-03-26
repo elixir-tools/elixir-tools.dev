@@ -41,7 +41,7 @@ Next LS supports auto-completions for the following features:
 - [x] Global remote functions
 - [ ] Local functions
 - [ ] Private functions
-- [ ] Variables/parameters
+- [x] Variables/parameters
 - [ ] Module attributes
 - [x] Structs
 - [x] Struct fields
@@ -51,7 +51,7 @@ Next LS supports auto-completions for the following features:
 - [ ] Imported functions (eg, `import Foo`)
 - [ ] Aliased modules (eg, `alias Foo.Bar` or `alias Foo.Bar, as: Baz`)
 - [ ] Aliased remote functions
-- [ ] Snippets
+- [x] Snippets
 
 New features coming soon!
 
