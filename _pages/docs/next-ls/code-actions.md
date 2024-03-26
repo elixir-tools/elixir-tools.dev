@@ -9,7 +9,6 @@ order: 4
 
 A code action represents a change that can be performed in code, e.g. to fix a problem or to refactor code.
 
-
 - [Underscore unused variable](#underscore-unused-variable)
 - [Require module](#require-module)
 

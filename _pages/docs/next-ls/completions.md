@@ -4,7 +4,7 @@ subtitle: "docs / next-ls"
 subtitle_link: "/docs/next-ls/quickstart"
 layout: ElixirTools.DocLayout
 section: Features
-order: 4
+order: 5
 github_stars: elixir-tools/next-ls
 ---
 
