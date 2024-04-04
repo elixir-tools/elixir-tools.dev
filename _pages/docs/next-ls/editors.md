@@ -240,12 +240,26 @@ config = { experimental = { completions = { enable = true } } }
 
 Zed will install and manage Next LS for you.
 
-Add the following settings (tested with [Zed Preview v0.106.2](https://zed.dev/releases/preview)):
-
 ```json
 {
+  // how you enable Next LS
   "elixir": {
     "lsp": "next_ls"
+  },
+  "lsp": {
+    // how you configure Next LS, notice the kebab casing
+    "next-ls": {
+      "initialization_options": {
+        "extensions": {
+          // example configuring the extensions
+          "credo": { "enable": false }
+        },
+        "experimental": {
+          // example configuring the experimental options
+          "completions": { "enable": true }
+        }
+      }
+    }
   }
 }
 ```
