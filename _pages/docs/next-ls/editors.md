@@ -264,7 +264,7 @@ Zed will install and manage Next LS for you.
 }
 ```
 
-If for some reason you want to run a local version of `next-ls` you can do the following:
+If you want to run a local version of `next-ls` you can do the following:
 
 ```json
 "elixir": {
