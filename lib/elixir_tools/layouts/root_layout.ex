@@ -68,10 +68,16 @@ defmodule ElixirTools.RootLayout do
             h4 class: "text-lg font-medium mb-2", do: "Team"
 
             ul do
-              li do
-                a href: "https://github.com/sponsors/mhanberg",
-                  class: "text-zinc-950 dark:text-white hover:underline" do
-                  "Mitchell Hanberg"
+              for member <- @data["team"] do
+                li do
+                  a href: member["url"],
+                    class: "text-zinc-950 dark:text-white hover:underline" do
+                    member["name"]
+
+                    if member["position"] do
+                      "(#{member["position"]})"
+                    end
+                  end
                 end
               end
             end
