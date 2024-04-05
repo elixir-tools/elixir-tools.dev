@@ -263,3 +263,18 @@ Zed will install and manage Next LS for you.
   }
 }
 ```
+
+If you want to run a local version of `next-ls` you can do the following:
+
+```json
+"elixir": {
+  "lsp": {
+    "local": {
+      "path": "<PATH TO BINARY>",
+      "arguments": ["--stdio"]
+    }
+  }
+},
+```
+
+Where `PATH TO BINARY` is a location to a local build, eg. `/Users/user/next-ls/burrito_out/next_ls_darwin_arm64`.
