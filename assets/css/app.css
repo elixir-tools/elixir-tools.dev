@@ -31,7 +31,12 @@ input#docsearch-input {
   content: "# ";
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @apply font-fancy;
 }
 
@@ -88,6 +93,6 @@ pre {
   @apply overflow-x-auto;
 }
 
-.prose pre.autumn.highlight code {
+.prose pre.autumn-hl code {
   @apply text-sm;
 }

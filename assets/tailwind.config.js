@@ -5,7 +5,7 @@ let plugin = require("tailwindcss/plugin");
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: ["./js/**/*.js", "./lib/**/*.ex", "_data/**/*.yaml"],
+  content: ["./js/**/*.js", "./lib/**/*.ex", "_data/**/*.yaml", "./assets/**/*.css"],
   theme: {
     extend: {
       colors: {
