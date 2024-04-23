@@ -25,7 +25,7 @@ I now have an incredible 44 sponsors! It would really be a dream to hit 100, so 
 
 In particular, [José Valim](https://twitter.com/josevalim/status/1762151450635858298) (the creator of Elixir) has joined as a sponsor through his company [Dashbit](https://dashbit.co), which is a major milestone for the project, thank you José!
 
-If you'd like to see your name or company's logo appear on the website and README, be sure to sponsor!
+If you'd like to see your name or company's logo appear on the website and README, be sure to [sponsor](https://github.com/sponsors/mhanberg)!
 
 <div class="bg-zinc-800 dark:bg-zinc-900 p-4 rounded">
     <div class="flex flex-col flex-wrap items-center sm:flex-row gap-x-12 gap-y-6">
@@ -144,11 +144,11 @@ Since v0.15.0 (the latest version as of the [Vol. 5 update](/news/the-2023-elixi
 
 Previously, Next LS only had minimal support for autocompletion, mainly: global modules, global structs, struct fields, remote functions (w/ documentation), special forms, bitstring modifiers, and filesystem paths in strings.
 
-These were mostly cribbed from the implementation of IEx, but was missing a lot of _context_ aware information. This is tricky, as it is typically for the document to be incomplete or contain errors while you are actively typing code.
+These were mostly cribbed from the implementation of IEx, but was missing a lot of _context_ aware information. This is tricky, as it is typical for the document to be incomplete or contain errors while you are actively typing code.
 
 Since then, two milestones have been met:
 
-1. I have completed the [Spitfire](https://github.com/elixir-tools/spitfire) parser that I announced during the last update. Spitfire is a completely handwritten recursive descent parser that is resilient to errors. This means that it can parse Elixir code that contains errors, "autocorrecting" syntax error and then continue parsing. This is very important to enable IDE functionality.
+1. I have completed the [Spitfire](https://github.com/elixir-tools/spitfire) parser that I announced during the last update. Spitfire is a handwritten recursive descent parser that is resilient to errors. This means that it can parse Elixir code that contains errors, "autocorrecting" syntax error and then continue parsing. This is very important to enable IDE functionality.
 
 1. José has implemented a handful of new APIs and compiler changes that allow us to create a "mini compiler". This mostly means that we can effectively expand macros and collect environment information like imports and aliases. 
 
@@ -160,7 +160,7 @@ This is an amazing achievement, but there is still a bit of stabilizing that mus
 
 In order to use these new APIs and compiler improvements, if you opt into completions, **Next LS will use a bundled archive of Elixir v1.17 instead of the version found on your `PATH`**. Once completions stabilize, Next LS will always use the bundled Elixir.
 
-This is certainly a trade-off. In exchange for getting access to the latest compiler features, you might seen compiler warnings that you won't see when you run `mix compile` in the terminal.
+This is certainly a trade-off. In exchange for getting access to the latest compiler features, you might see compiler warnings that you won't see when you run `mix compile` in the terminal.
 
 I believe this is a reasonable trade-off, but you can also now explicitly set the Elixir bin path used by Next LS, so if this is not acceptable, you can set it to a version manager shim or an absolute path to your locally installed Elixir, you just wont get access to the latest compiler features.
 
@@ -244,7 +244,7 @@ I'd like to give a huge shout out to all of the contributors, bug reporters, and
 | Sponsors | | |
 | --- | --- | ---|
 | [0x7fdev](https://github.com/0x7fdev) | [akoutmos](https://github.com/akoutmos) | [amplifiedai](https://github.com/amplifiedai) | 
-| [andrepaes](https://github.com/andrepaes) | [baldwindavid](https://github.com/baldwindavid) k| [brettwise](https://github.com/brettwise) | 
+| [andrepaes](https://github.com/andrepaes) | [baldwindavid](https://github.com/baldwindavid) | [brettwise](https://github.com/brettwise) | 
 | [capitalist](https://github.com/capitalist) | [chriscrabtree](https://github.com/chriscrabtree) | [cigrainger](https://github.com/cigrainger) | 
 | [clark-lindsay](https://github.com/clark-lindsay) | [davydog187](https://github.com/davydog187) | [dbernheisel](https://github.com/dbernheisel) | 
 | [ddresselhaus](https://github.com/ddresselhaus) | [dkarter](https://github.com/dkarter) | [dvic](https://github.com/dvic) | 
