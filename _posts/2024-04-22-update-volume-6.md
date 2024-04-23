@@ -180,7 +180,7 @@ Code actions are commands you can run, usually in response to a compiler diagnos
 
 We currently have support for:
 
-- [Underscore an unused variable]/docs/next-ls/code-actions/#underscore-unused-variable)
+- [Underscore an unused variable](/docs/next-ls/code-actions/#underscore-unused-variable)
 - [Require module](https://www.elixir-tools.dev/docs/next-ls/code-actions/#require-module)
 
 In development we have some Credo related code actions:
