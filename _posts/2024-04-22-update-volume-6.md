@@ -1,13 +1,13 @@
 ---
 title: "The elixir-tools Update Vol. 6"
 permalink: "/news/the-elixir-tools-update-vol-6"
-date: 2024-04-22 01:00:00
+date: 2024-05-08 01:00:00
 layout: "ElixirTools.PostLayout"
 ---
 
 Welcome to the 6th volume of the elixir-tools Update!
 
-It's been almost 4 months since the last update, and a _ton_ has happened, let's dive right in!
+It's been over 4 months since the last update, and a _ton_ has happened, let's dive right in!
 
 ## New team member!
 
@@ -129,10 +129,10 @@ If you'd like to see your name or company's logo appear on the website and READM
 
 ## Next LS
 
-- 20,178 total downloads
+- 20,790 total downloads
     - 2,332 from hex.pm (it switched to GitHub downloads at v0.8)
-    - 17,846 from GitHub releases
-    - 1,410 downloads of the latest release (v0.20.2)
+    - 18,458 from GitHub releases
+    - 2,021 downloads of the latest release (v0.20.2)
 - 66 releases
 - 25 contributors
 
@@ -154,6 +154,8 @@ Since then, two milestones have been met:
 
 Combining these two means that autocomplete now completes 99% of what you would naively expect it to, including functions imported and aliased by `import` and `alias`, and any of those that are done within `use` macros.
 
+<video src="https://f005.backblazeb2.com/file/elixir-tools/better-completions-demo.mp4" controls></video>
+
 This is an amazing achievement, but there is still a bit of stabilizing that must be done and improvements to be made, so completions will still be opt-in behind a setting, but I encourage everyone to try!
 
 #### Bundling the latest version of Elixir
@@ -170,6 +172,8 @@ Next LS also ships with snippets for many common `Kernel`, `SpecialForm`, and `E
 
 In the future, extensions will be able to provide snippets, so libraries will be able to define custom snippets for their functions.
 
+<video src="https://f005.backblazeb2.com/file/elixir-tools/snippets-demo.mp4" controls></video>
+
 #### Commands and Code Actions
 
 We now have support for a several different commands and code actions:
@@ -181,11 +185,22 @@ Code actions are commands you can run, usually in response to a compiler diagnos
 We currently have support for:
 
 - [Underscore an unused variable](/docs/next-ls/code-actions/#underscore-unused-variable)
-- [Require module](https://www.elixir-tools.dev/docs/next-ls/code-actions/#require-module)
+  <video src="https://f005.backblazeb2.com/file/elixir-tools/underscore-variable-demo.mp4" controls></video>
+  
+- [Require module](/docs/next-ls/code-actions/#require-module)
+  <video src="https://f005.backblazeb2.com/file/elixir-tools/require-module-demo.mp4" controls></video>
 
-In development we have some Credo related code actions:
+- [Create undefined function](/docs/next-ls/code-actions/#create-undefined-function)
+  <video src="https://f005.backblazeb2.com/file/elixir-tools/create-undfined-function-demo.mp4" controls></video>
 
-- [Remove debugger statement](https://github.com/elixir-tools/next-ls/pull/426/files/962c957dfc62c8af2db8502689b2c7f739b8cdf4..ac379cf55768b6d08b27b37b1f90287b522dc67b)
+- [Remove debugger expression](/docs/next-ls/code-actions/#remove-debugger-expression)
+
+  While building this, Nikola and I contributed bug fixes to Credo to make this code action easier to implement
+
+  - [Fix incorrect columns for dbg and IO.inspect #1126](https://github.com/rrrene/credo/pull/1126)
+  - [Add correct column metadata to all warning checks #1127](https://github.com/rrrene/credo/pull/1127)
+
+  <video src="https://f005.backblazeb2.com/file/elixir-tools/remove-debugger-demo.mp4" controls></video>
 
 ##### Commands
 
@@ -194,8 +209,13 @@ Commands are custom actions defined by Next LS that can usually be invoked by yo
 We currently have support for:
 
 - [Convert nested function call to pipe syntax](/docs/next-ls/commands/#to-pipe)
+  <video src="https://f005.backblazeb2.com/file/elixir-tools/to-pipe-demo.mp4" controls></video>
+
 - [Convert pipe syntax to nested function call](/docs/next-ls/commands/#from-pipe)
+  <video src="https://f005.backblazeb2.com/file/elixir-tools/from-pipe-demo.mp4" controls></video>
+
 - [Refactor module as an alias](/docs/next-ls/commands/#alias-refactor)
+  <video src="https://f005.backblazeb2.com/file/elixir-tools/alias-refactor-demo.mp4" controls></video>
 
 #### Convenience enhancements
 
