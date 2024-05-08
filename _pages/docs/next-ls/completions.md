@@ -15,6 +15,8 @@ if you would like to use it, but if there are bugs, you can toggle it off and aw
 
 To enable completions, you must pass the initialization options to the server. You can find the exact settings for your specific editor on their homepage/README, but in general the shape is:
 
+**NOTE**: When using completions, Next LS will use a bundled archive of Elixir instead of the one found in your `PATH`. **This requires at OTP 25+.**
+
 ```lua
 {
   experimental = {
