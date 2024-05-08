@@ -278,3 +278,30 @@ If you want to run a local version of `next-ls` you can do the following:
 ```
 
 Where `PATH TO BINARY` is a location to a local build, eg. `/Users/user/next-ls/burrito_out/next_ls_darwin_arm64`.
+
+## Sublime Text
+
+Sublime Text support uses the [LSP for Sublime Text](https://lsp.sublimetext.io/) package with the following configuration.
+
+```json
+// Settings in here override those in "LSP/LSP.sublime-settings"
+{
+  "clients": {
+    "elixir": {
+      "command": [
+        "nextls",
+        "--stdio"
+      ],
+      "selector": "source.elixir | source.ex | source.exs",
+      "initializationOptions": {
+        "extensions": {
+          "credo": { "enable": true }
+        },
+        "experimental": {
+          "completions": { "enable": true }
+        }
+      }
+    }
+  }
+}
+```
