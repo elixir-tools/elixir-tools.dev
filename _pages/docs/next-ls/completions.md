@@ -33,24 +33,28 @@ For configurations examples in your editor refer to: [Editors](/docs/next-ls/edi
 
 ![Demonstration of struct field completions in Next LS](https://f005.backblazeb2.com/file/elixir-tools/next-ls-completions-2.png)
 
+<video src="https://f005.backblazeb2.com/file/elixir-tools/better-completions-demo.mp4" controls></video>
+
+<video src="https://f005.backblazeb2.com/file/elixir-tools/snippets-demo.mp4" controls></video>
+
 ## Caveats
 
 Next LS supports auto-completions for the following features:
 
 - [x] Modules
 - [x] Global remote functions
-- [ ] Local functions
-- [ ] Private functions
+- [x] Local functions - if they are above the cursor (will improve later)
+- [x] Private functions - if they are above the cursor (will improve later)
 - [x] Variables/parameters
-- [ ] Module attributes
+- [x] Module attributes
 - [x] Structs
 - [x] Struct fields
 - [x] Bitstring modifiers
 - [x] Special forms
 - [x] Kernel functions
-- [ ] Imported functions (eg, `import Foo`)
-- [ ] Aliased modules (eg, `alias Foo.Bar` or `alias Foo.Bar, as: Baz`)
-- [ ] Aliased remote functions
+- [x] Imported functions (eg, `import Foo`)
+- [x] Aliased modules (eg, `alias Foo.Bar` or `alias Foo.Bar, as: Baz`)
+- [x] Aliased remote functions
 - [x] Snippets
 
 New features coming soon!
