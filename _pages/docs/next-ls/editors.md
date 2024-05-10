@@ -242,10 +242,13 @@ Zed will install and manage Next LS for you.
 
 ```json
 {
-  // how you enable Next LS
-  "elixir": {
-    "lsp": "next_ls"
+  // how you enable Next LS, notice the kebab casing
+  "languages": {
+    "Elixir": {
+      "language_servers": ["next-ls"]
+    }
   },
+
   "lsp": {
     // how you configure Next LS, notice the kebab casing
     "next-ls": {
