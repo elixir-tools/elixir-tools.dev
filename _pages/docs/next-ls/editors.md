@@ -24,11 +24,11 @@ You might also decide to install and manage `next-ls` yourself using [`nvim-lspc
 
 ```lua
  require("lspconfig")["nextls"].setup({
-   cmd = {"nextls", "--stdio"} -- assumes you have the executable `nextls` in your `$PATH`
+   cmd = {"nextls", "--stdio"},
    init_options = {
      experimental = {
        completions = {
-         enable = true, -- this will enable completions support through next-ls
+         enable = true,
        },
      },
    }
