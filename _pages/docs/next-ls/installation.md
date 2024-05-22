@@ -53,7 +53,7 @@ Releases are named for the OS and CPU for which they run on, so make sure you do
 If you use the [gh](https://cli.github.com/) CLI, you can easily download release artifacts like so:
 
 ```sh
-gh release download v0.14.2 \
+gh release download v0.22.6 \
   --pattern next_ls_linux_amd64 \
   --output ~/.bin/nextls \
   --clobber \

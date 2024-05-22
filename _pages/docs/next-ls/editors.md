@@ -16,28 +16,29 @@ github_stars: elixir-tools/next-ls
 
 ### elixir-tools.nvim
 
-[elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim) is a first party elixir-tools editor plugin and will install and manage Next LS for you
+[elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim) is a first party elixir-tools editor plugin and will install and manage Next LS for you.
+
+#### Note
+
+If you are using a Neovim distribution like [LunarVim](https://www.lunarvim.org/), [AstroVim](https://astronvim.com/), or [NVChad](https://nvchad.com/), please make sure to disable any Elixir LSP support that comes out of the box, as it will interfere with `elixir-tools.nvim`.
 
 ### nvim-lspconfig
 
-You might also decide to install and manage `next-ls` yourself using [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#nextls), and perhaps, [`homebrew`](/docs/next-ls/installation/#homebrew) for the `nextls` binary.
+Next LS support is built into [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#nextls), you just need to [install Next LS](/docs/next-ls/installation) and set your `cmd`.
 
 ```lua
- require("lspconfig")["nextls"].setup({
-   cmd = {"nextls", "--stdio"},
-   init_options = {
-     experimental = {
-       completions = {
-         enable = true,
-       },
-     },
-   }
- })
+require("lspconfig")["nextls"].setup({
+  cmd = {"nextls", "--stdio"},
+  init_options = {
+    extensions = {
+      credo = { enable = true }
+    },
+    experimental = {
+      completions = { enable = true }
+    }
+  }
+})
 ```
-
-### Note
-
-If you are using a Neovim distribution like [LunarVim](https://www.lunarvim.org/), [AstroVim](https://astronvim.com/), or [NVChad](https://nvchad.com/), please make sure to disable any Elixir LSP support that comes out of the box, as it will interfere with `elixir-tools.nvim`.
 
 ## Vim
 
