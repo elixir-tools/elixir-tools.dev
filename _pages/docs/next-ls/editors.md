@@ -14,11 +14,11 @@ github_stars: elixir-tools/next-ls
 
 ## Neovim
 
-### [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim)
+### elixir-tools.nvim
 
 [elixir-tools.nvim](https://github.com/elixir-tools/elixir-tools.nvim) is a first party elixir-tools editor plugin and will install and manage Next LS for you
 
-### [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#nextls)
+### nvim-lspconfig
 
 You might also decide to install and manage `next-ls` yourself using [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#nextls), and perhaps, [`homebrew`](/docs/next-ls/installation/#homebrew) for the `nextls` binary.
 
