@@ -260,17 +260,25 @@ config = { experimental = { completions = { enable = true } } }
 
 ## Zed
 
-Zed will install and manage Next LS for you.
+Zed will install and manage Next LS for you. You can make `next-ls` the default with the following config:
 
 ```json
 {
-  // how you enable Next LS, notice the kebab casing
   "languages": {
     "Elixir": {
-      "language_servers": ["next-ls"]
+      "language_servers": ["!lexical", "!elixir-ls", "next-ls"]
+    },
+    "HEEX": {
+      "language_servers": ["!lexical", "!elixir-ls", "next-ls"]
     }
-  },
+  }
+}
+```
 
+Once it's on you can configure it by adding some options:
+
+```json
+{
   "lsp": {
     // how you configure Next LS, notice the kebab casing
     "next-ls": {
@@ -289,20 +297,7 @@ Zed will install and manage Next LS for you.
 }
 ```
 
-If you want to run a local version of `next-ls` you can do the following:
-
-```json
-"elixir": {
-  "lsp": {
-    "local": {
-      "path": "<PATH TO BINARY>",
-      "arguments": ["--stdio"]
-    }
-  }
-},
-```
-
-Where `PATH TO BINARY` is a location to a local build, eg. `/Users/user/next-ls/burrito_out/next_ls_darwin_arm64`.
+And, if you want to run a local version of `next-ls` make sure your local build is in your path named `nextls`.
 
 ## Sublime Text
 
