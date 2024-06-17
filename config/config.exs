@@ -9,7 +9,7 @@ config :tableau, :reloader,
   ]
 
 config :web_dev_utils, :reload_log, true
-config :web_dev_utils, :reload_url, "'wss://' + location.host + '/ws'"
+config :web_dev_utils, :reload_url, "'ws://' + location.host + '/ws'"
 
 config :temple,
   engine: EEx.SmartEngine,

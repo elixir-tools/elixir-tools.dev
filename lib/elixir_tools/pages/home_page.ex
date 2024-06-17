@@ -99,6 +99,7 @@ defmodule ElixirTools.HomePage do
             for sponsor <- @data["corporate_sponsors"] do
               a href: sponsor["url"],
                 target: "_blank",
+                class: "no-underline",
                 title: sponsor["name"] do
                 cond do
                   sponsor["svg"] ->
@@ -109,7 +110,7 @@ defmodule ElixirTools.HomePage do
                         class: "h-16 sm:h-20 rounded object-cover"
 
                   true ->
-                    div class: "text-white text-4xl" do
+                    div class: "text-white text-4xl no-underline" do
                       sponsor["name"]
                     end
                 end
