@@ -1,36 +1,30 @@
 {
-  description = "spitfire";
+  description = "elixir-tools.dev";
 
   inputs = {
-    beam-flakes.url = "github:shanesveller/nix-beam-flakes";
-    beam-flakes.inputs.flake-parts.follows = "flake-parts";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 
-  outputs = inputs @ {
-    beam-flakes,
-    flake-parts,
-    ...
-  }:
+  outputs = inputs @ {flake-parts, ...}:
     flake-parts.lib.mkFlake {inherit inputs;} {
-      imports = [beam-flakes.flakeModule];
-
-      systems = ["aarch64-darwin" "x86_64-darwin" "x86_64-linux"];
-
+      imports = [];
+      systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin"];
       perSystem = {
         config,
+        self',
+        inputs',
         pkgs,
+        system,
         ...
       }: {
-        beamWorkspace = {
-          enable = true;
-          devShell.languageServers.elixir = false;
-          devShell.languageServers.erlang = false;
-          flakePackages = true;
-          versions = {
-            elixir = "1.16.2";
-            erlang = "26.2.3";
+        devShells = {
+          default = pkgs.mkShell {
+            # The Nix packages provided in the environment
+            packages = with pkgs; [
+              beam.packages.erlang_27.erlang
+              beam.packages.erlang_27.elixir_1_17
+            ];
           };
         };
       };
