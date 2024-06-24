@@ -25,7 +25,7 @@ defmodule ElixirTools.HomePage do
           end
 
           p do
-            "The elixir-tools effort is lead by"
+            "The elixir-tools effort is led by"
 
             a href: "https://github.com/mhanberg",
               do: "Mitchell Hanberg,"
