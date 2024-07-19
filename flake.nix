@@ -24,6 +24,7 @@
             packages = with pkgs; [
               beam.packages.erlang_27.erlang
               beam.packages.erlang_27.elixir_1_17
+              nodejs_18
             ];
           };
         };

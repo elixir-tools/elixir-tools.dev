@@ -43,6 +43,10 @@ config :tableau, Tableau.PageExtension, enabled: true
 config :tableau, Tableau.PostExtension, enabled: true, future: true
 config :tableau, Tableau.SitemapExtension, enabled: true
 
+config :tableau, Tableau.OgExtension,
+  enabled: true,
+  template: {ElixirTools.Og, :template}
+
 config :tableau, Tableau.RSSExtension,
   enabled: true,
   title: "elixir-tools",

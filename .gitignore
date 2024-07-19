@@ -26,3 +26,5 @@ lsp-*.tar
 /tmp/
 
 _site
+
+priv/og/

@@ -2,6 +2,12 @@ defmodule ElixirTools.RootLayout do
   use ElixirTools.Component
   use Tableau.Layout
 
+  defp og_image_url(permalink) do
+    file = Tableau.OgExtension.file_name(permalink)
+
+    Path.join("https://f005.backblazeb2.com/file/ElixirToolsOgImages/og", file)
+  end
+
   def footer(assigns) do
     temple do
       footer id: "footer",
@@ -145,6 +151,17 @@ defmodule ElixirTools.RootLayout do
 
           link rel: "stylesheet", href: "/css/site.css"
           link rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+
+          meta name: "twitter:card",
+               content:
+                 "#{@page[:twitter][:card] || @site[:twitter][:card] || "summary_large_image"}"
+
+          meta property: "og:image", content: "#{og_image_url(@page.permalink)}"
+          meta property: "twitter:image", content: "#{og_image_url(@page.permalink)}"
+
+          meta property: "twitter:title", content: @page[:title] || "elixir-tools"
+          meta name: "twitter:site", content: "@elixir_tools"
+          meta name: "twitter:creator", content: "@elixir_tools"
         end
 
         body class:

@@ -5,7 +5,9 @@ defmodule ElixirTools.SidebarLayout do
   @sections %{
     "Getting Started" => 1,
     "Features" => 2,
-    "Sidebar" => 2
+    "Extensions" => 3,
+    "Help" => 4,
+    "Development" => 5
   }
 
   def template(assigns) do

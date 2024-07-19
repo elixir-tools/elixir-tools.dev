@@ -3,6 +3,7 @@ defmodule ElixirTools.HomePage do
 
   use Tableau.Page,
     layout: ElixirTools.RootLayout,
+    title: "elixir-tools",
     permalink: "/"
 
   def header(assigns) do
