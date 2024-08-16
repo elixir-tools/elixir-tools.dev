@@ -20,6 +20,18 @@ defmodule ElixirTools.HomePage do
   def template(assigns) do
     temple do
       main class: "container mx-auto px-2 mt-8 mb-16" do
+        section id: "notice",
+                class:
+                  "italic bg-gold-400 rounded p-4 text-black mb-8 text-lg font-semibold max-w-[65ch]" do
+          p do
+            "Next LS is joining Lexical and Elixir LS! Read more about it "
+
+            a href: "/news/the-elixir-tools-update-vol-7", class: "text-black" do
+              "here."
+            end
+          end
+        end
+
         section id: "home", class: "prose dark:prose-invert" do
           p do
             "elixir-tools is a suite of developer tooling and packages for Elixir developers."
