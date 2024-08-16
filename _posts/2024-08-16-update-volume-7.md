@@ -7,7 +7,7 @@ layout: "ElixirTools.PostLayout"
 
 Next LS is joining forces with Lexical and ElixirLS!
 
-You might have already seen that [Steve Cohen](https://github.com/schohen), [Łukasz Samson](https://github.com/lukaszsamson), [Jonatan Kłosko](https://github.com/jonatanklosko), and myself ([Mitchell Hanberg](https://github.com/mhanberg)) are forming the official Elixir Language Server team!
+You might have already seen that [Steve Cohen](https://github.com/scohen), [Łukasz Samson](https://github.com/lukaszsamson), [Jonatan Kłosko](https://github.com/jonatanklosko), and myself ([Mitchell Hanberg](https://github.com/mhanberg)) are forming the official Elixir Language Server team!
 
 You can read more about it on [elixir-lang.org](https://elixir-lang.org/blog/2024/08/15/welcome-elixir-language-server-team/).
 
@@ -37,7 +37,7 @@ No, we aren't committing to any sort of timeline, merely working as fast as we a
 You can sponsor us individually on GitHub.
 
 - [mhanberg](https://github.com/sponsors/mhanberg)
-- [schohen](https://github.com/sponsors/schohen)
+- [scohen](https://github.com/sponsors/scohen)
 - [lukaszsamson](https://github.com/sponsors/lukaszsamson)
 
 If sponsoring on GitHub is not an option for you or your organization, please reach out to [José](mailto:jose.valim@dashbit.co) via email to work something out.
